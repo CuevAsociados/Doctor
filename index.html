@@ -1,543 +1,717 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-  <title>Dr. Libio Vera Vélez | Inmunólogo Clínico · Alergias, Asma & Piel</title>
-  <meta name="description" content="Dr. Libio Vera Vélez — Inmunólogo Clínico especializado en alergias, asma y piel. Atención personalizada para niños y adultos en el Centro de Alergia, Asma y Piel, Ecuador." />
-  <meta name="keywords" content="alergia, asma, piel, inmunología, longevidad, nutrición antialérgica, Guayaquil, Ecuador" />
-  <meta name="theme-color" content="#0b1f3a" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
-  <style>
-  /* ══ VARIABLES ══ */
-  :root {
-    --navy:       #0b1f3a;
-    --navy-mid:   #122844;
-    --navy-light: #1a3658;
-    --teal:       #2a7f9a;
-    --teal-light: #3da0be;
-    --gold:       #c9a84c;
-    --gold-light: #e0c270;
-    --white:      #f8f9fb;
-    --off-white:  #eef1f5;
-    --text-body:  #3a4a5c;
-    --text-muted: #6b7e94;
-    --serif: 'Cormorant Garamond', Georgia, serif;
-    --sans:  'DM Sans', sans-serif;
-    --r: 6px;
-    --sh: 0 4px 24px rgba(0,0,0,.08);
-    --sh-lg: 0 12px 48px rgba(0,0,0,.14);
-  }
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-  body { font-family: var(--sans); background: var(--white); color: var(--text-body); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
-  img { max-width: 100%; height: auto; display: block; }
-  a { color: inherit; }
-  ::-webkit-scrollbar { width: 5px; }
-  ::-webkit-scrollbar-track { background: var(--navy); }
-  ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=5.0"/>
+<title>Dr. Libio Vera Vélez | Inmunólogo Clínico — Alergias, Asma y Piel · Ecuador</title>
+<meta name="description" content="Centro de Alergia, Asma y Piel del Dr. Libio Vera Vélez. Inmunólogo Clínico especializado en alergias, asma, piel, nutrición antialérgica y medicina de longevidad. Guayaquil, Ecuador."/>
+<meta name="keywords" content="alergólogo Ecuador, inmunólogo Guayaquil, alergias niños adultos, asma tratamiento, dermatitis atópica, nutrición antialérgica, medicina longevidad"/>
+<meta name="theme-color" content="#0b1f3a"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet"/>
+<style>
+/* ═══════════════════════════════════════════
+   DESIGN TOKENS
+═══════════════════════════════════════════ */
+:root{
+  --navy:#0b1f3a; --navy2:#122844; --navy3:#1a3658;
+  --teal:#2a7f9a; --teal2:#3da0be; --teal3:#5bb8d4;
+  --gold:#c9a84c; --gold2:#e0c270; --gold3:#f0d98a;
+  --white:#f8f9fb; --off:#eef1f5;
+  --body:#3a4a5c; --muted:#6b7e94;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'DM Sans',sans-serif;
+  --r:8px; --r2:4px;
+  --sh:0 4px 24px rgba(0,0,0,.07);
+  --sh2:0 12px 48px rgba(0,0,0,.13);
+  --sh3:0 24px 80px rgba(0,0,0,.18);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);background:var(--white);color:var(--body);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:var(--sans);cursor:pointer}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--navy)}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:3px}
 
-  /* ══ CONTAINER ══ */
-  .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-  @media (min-width: 768px)  { .container { padding: 0 40px; } }
-  @media (min-width: 1024px) { .container { padding: 0 60px; } }
+/* ═══════════════ LAYOUT ═══════════════ */
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 20px}
+@media(min-width:768px){.wrap{padding:0 40px}}
+@media(min-width:1100px){.wrap{padding:0 64px}}
+.sp{padding:72px 0}
+@media(min-width:768px){.sp{padding:96px 0}}
+@media(min-width:1100px){.sp{padding:120px 0}}
 
-  /* ══ SECTION PADDING ══ */
-  .sp { padding: 60px 0; }
-  @media (min-width: 768px)  { .sp { padding: 80px 0; } }
-  @media (min-width: 1024px) { .sp { padding: 110px 0; } }
+/* ═══════════════ TYPE HELPERS ═══════════════ */
+.eyebrow{display:inline-flex;align-items:center;gap:10px;margin-bottom:14px}
+.eyebrow::before{content:'';width:28px;height:1px;background:var(--gold);flex-shrink:0}
+.eyebrow span{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.h2{font-family:var(--serif);font-size:clamp(1.9rem,4.5vw,3rem);font-weight:300;line-height:1.18}
+.h2 em{font-style:italic}
+.lead{font-size:clamp(.93rem,2vw,1.05rem);line-height:1.9;font-weight:300;color:var(--muted)}
 
-  /* ══ SHARED LABELS / TITLES ══ */
-  .label { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 12px; }
-  .label::before { content:''; display:block; width:28px; height:1px; background:var(--gold); flex-shrink:0; }
-  .label span { font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); font-weight:600; }
-  .stitle { font-family:var(--serif); font-size:clamp(1.85rem,5vw,3rem); font-weight:300; line-height:1.2; }
-  .stitle em { font-style:italic; }
+/* ═══════════════ BUTTONS ═══════════════ */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:var(--r2);font-size:.85rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;transition:all .24s;min-height:50px;white-space:nowrap;-webkit-tap-highlight-color:transparent;border:none;cursor:pointer}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-gold:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 8px 28px rgba(201,168,76,.3)}
+.btn-outline-gold{background:transparent;color:var(--gold);border:1.5px solid var(--gold)}
+.btn-outline-gold:hover{background:rgba(201,168,76,.08)}
+.btn-outline-white{background:transparent;color:rgba(255,255,255,.85);border:1.5px solid rgba(255,255,255,.3)}
+.btn-outline-white:hover{border-color:rgba(255,255,255,.7);color:#fff}
+.btn-teal{background:var(--teal);color:#fff}
+.btn-teal:hover{background:var(--teal2);transform:translateY(-2px);box-shadow:0 8px 28px rgba(42,127,154,.3)}
+.btn-wa{background:#25D366;color:#fff}
+.btn-wa:hover{background:#1ebe5a;transform:translateY(-2px);box-shadow:0 8px 28px rgba(37,211,102,.3)}
+.btn-ghost{background:rgba(255,255,255,.07);color:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.12)}
+.btn-ghost:hover{background:rgba(255,255,255,.12);color:#fff}
 
-  /* ══════════ NAV ══════════ */
-  #navbar {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-    background: rgba(11,31,58,.94);
-    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(201,168,76,.1);
-    transition: background .3s;
-  }
-  #navbar.scrolled { background: rgba(11,31,58,.99); }
+/* ═══════════════ NAV ═══════════════ */
+#nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(11,31,58,.93);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border-bottom:1px solid rgba(201,168,76,.1);transition:background .3s}
+#nav.scrolled{background:rgba(11,31,58,.99)}
+.nav-wrap{display:flex;align-items:center;justify-content:space-between;height:68px;padding:0 20px;max-width:1300px;margin:0 auto}
+@media(min-width:768px){.nav-wrap{padding:0 40px}}
+.logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo-circle{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--teal2));display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0}
+.logo-text{font-family:var(--serif);font-size:.98rem;color:#fff;font-weight:300;letter-spacing:.02em;white-space:nowrap}
+.logo-text b{color:var(--gold);font-weight:600}
+.nav-links{display:none;list-style:none;gap:26px}
+@media(min-width:900px){.nav-links{display:flex}}
+.nav-links a{font-size:.77rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.7);font-weight:500;transition:color .2s;padding:4px 0}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{display:none}
+@media(min-width:900px){.nav-cta{display:inline-flex}}
+.ham{display:flex;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;background:none;border:none;padding:8px;-webkit-tap-highlight-color:transparent}
+@media(min-width:900px){.ham{display:none}}
+.ham span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:transform .3s,opacity .3s,width .3s;transform-origin:center}
+.ham.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.ham.open span:nth-child(2){opacity:0;width:0}
+.ham.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
-  .nav-inner {
-    display: flex; align-items: center; justify-content: space-between;
-    height: 68px; padding: 0 20px;
-    max-width: 1300px; margin: 0 auto;
-  }
-  @media (min-width: 768px) { .nav-inner { padding: 0 40px; } }
+/* Drawer */
+.drawer{display:none;position:fixed;top:68px;left:0;right:0;bottom:0;background:rgba(7,18,34,.97);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);z-index:290;flex-direction:column;padding:24px 20px 40px;overflow-y:auto}
+.drawer.open{display:flex;animation:dIn .22s ease}
+@media(min-width:900px){.drawer{display:none!important}}
+@keyframes dIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.d-nav{list-style:none;display:flex;flex-direction:column;gap:2px;margin-bottom:24px}
+.d-nav a{display:block;padding:14px 16px;font-size:1.02rem;color:rgba(255,255,255,.8);border-radius:var(--r2);border-left:2px solid transparent;transition:all .2s}
+.d-nav a:hover,.d-nav a:active{background:rgba(255,255,255,.05);border-left-color:var(--gold);color:#fff;padding-left:22px}
+.d-sep{height:1px;background:rgba(255,255,255,.07);margin:16px 0}
+.d-btns{display:flex;flex-direction:column;gap:10px}
 
-  .nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; flex-shrink:0; }
-  .nav-logo-icon { width:36px; height:36px; border-radius:50%; background:linear-gradient(135deg,var(--teal),var(--teal-light)); display:flex; align-items:center; justify-content:center; font-size:.95rem; }
-  .nav-logo-text { font-family:var(--serif); font-size:1rem; color:#fff; font-weight:300; letter-spacing:.03em; white-space:nowrap; }
-  .nav-logo-text span { color:var(--gold); }
+/* ═══════════════ HERO ═══════════════ */
+#hero{min-height:100svh;background:var(--navy);display:flex;align-items:center;position:relative;overflow:hidden;padding-top:68px}
+.hero-bg{position:absolute;inset:0;z-index:0;background:radial-gradient(ellipse 100% 80% at 75% 55%,rgba(42,127,154,.17) 0%,transparent 58%),radial-gradient(ellipse 55% 55% at 92% 12%,rgba(201,168,76,.07) 0%,transparent 52%),linear-gradient(155deg,#0b1f3a 0%,#0e2640 50%,#0c1c33 100%)}
+.hero-ring{position:absolute;border-radius:50%;border:1px solid rgba(201,168,76,.07);animation:pRing 9s ease-in-out infinite;pointer-events:none}
+.hr1{width:380px;height:380px;right:-70px;top:50%;transform:translateY(-50%);animation-delay:0s}
+.hr2{width:600px;height:600px;right:-170px;top:50%;transform:translateY(-50%);animation-delay:1.8s}
+.hr3{width:820px;height:820px;right:-270px;top:50%;transform:translateY(-50%);animation-delay:3.6s}
+@media(max-width:767px){.hr1{width:220px;height:220px;opacity:.5}.hr2,.hr3{display:none}}
 
-  .nav-links { display:none; list-style:none; gap:28px; }
-  @media (min-width: 900px) { .nav-links { display:flex; } }
-  .nav-links a { font-size:.78rem; letter-spacing:.08em; text-transform:uppercase; color:rgba(255,255,255,.72); text-decoration:none; font-weight:500; transition:color .2s; padding:4px 0; }
-  .nav-links a:hover { color:var(--gold); }
+.hero-grid{position:relative;z-index:2;width:100%;max-width:1200px;margin:0 auto;padding:48px 20px 96px;display:grid;grid-template-columns:1fr;gap:48px;align-items:center}
+@media(min-width:768px){.hero-grid{padding:64px 40px 104px}}
+@media(min-width:1060px){.hero-grid{grid-template-columns:1fr 440px;gap:64px;padding:64px 64px 104px}}
 
-  .nav-cta { display:none; background:var(--gold); color:var(--navy); padding:10px 20px; border-radius:var(--r); font-size:.78rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; text-decoration:none; transition:background .2s,transform .15s; white-space:nowrap; }
-  @media (min-width: 900px) { .nav-cta { display:inline-block; } }
-  .nav-cta:hover { background:var(--gold-light); transform:translateY(-1px); }
+/* Hero text */
+.hero-eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:22px;opacity:0;animation:fUp .6s .1s forwards}
+.hero-line{width:36px;height:1px;background:var(--gold);flex-shrink:0}
+.hero-eyebrow span{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.hero-name{font-family:var(--serif);font-size:clamp(2.4rem,7.5vw,4.8rem);font-weight:300;color:#fff;line-height:1.06;margin-bottom:6px;opacity:0;animation:fUp .6s .25s forwards}
+.hero-name em{font-style:italic;color:var(--gold)}
+.hero-name strong{font-weight:600;display:block}
+.hero-role{font-size:clamp(.78rem,2vw,.9rem);color:var(--teal2);letter-spacing:.09em;text-transform:uppercase;font-weight:500;margin-bottom:24px;opacity:0;animation:fUp .6s .38s forwards;line-height:1.6}
+.hero-bar{width:52px;height:2px;background:var(--gold);margin-bottom:24px;opacity:0;animation:fUp .6s .46s forwards}
+.hero-desc{font-size:clamp(.92rem,2vw,1.06rem);color:rgba(255,255,255,.58);line-height:1.88;margin-bottom:36px;font-weight:300;max-width:520px;opacity:0;animation:fUp .6s .56s forwards}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;opacity:0;animation:fUp .6s .7s forwards}
 
-  /* Hamburger */
-  .ham { display:flex; flex-direction:column; justify-content:center; gap:5px; width:44px; height:44px; background:none; border:none; cursor:pointer; padding:8px; border-radius:4px; -webkit-tap-highlight-color:transparent; }
-  @media (min-width: 900px) { .ham { display:none; } }
-  .ham span { display:block; width:22px; height:2px; background:#fff; border-radius:2px; transition:transform .3s,opacity .3s,width .3s; transform-origin:center; }
-  .ham.open span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
-  .ham.open span:nth-child(2) { opacity:0; width:0; }
-  .ham.open span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+/* Hero visual */
+.hero-visual{display:none;justify-content:center;align-items:flex-end}
+@media(min-width:1060px){.hero-visual{display:flex}}
+.hv-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r);padding:32px 28px;display:flex;flex-direction:column;align-items:center;gap:20px;backdrop-filter:blur(8px);width:360px}
+.hv-icon{font-size:6rem;filter:drop-shadow(0 0 32px rgba(42,127,154,.35));animation:float 6s ease-in-out infinite}
+.hv-title{font-family:var(--serif);font-size:1.5rem;font-weight:400;color:#fff;text-align:center;line-height:1.3}
+.hv-title span{color:var(--gold);font-style:italic}
+.hv-pills{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.hv-pill{font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;background:rgba(42,127,154,.2);color:var(--teal2);padding:5px 12px;border-radius:20px;border:1px solid rgba(42,127,154,.25)}
 
-  /* Drawer */
-  .drawer { display:none; position:fixed; top:68px; left:0; right:0; bottom:0; background:rgba(11,31,58,.98); backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px); z-index:190; flex-direction:column; padding:28px 24px 40px; overflow-y:auto; }
-  .drawer.open { display:flex; animation:drawerIn .22s ease; }
-  @media (min-width: 900px) { .drawer { display:none !important; } }
-  @keyframes drawerIn { from{opacity:0;transform:translateY(-6px)} to{opacity:1;transform:none} }
+/* Stats strip */
+.hero-stats{position:absolute;bottom:0;left:0;right:0;z-index:2;background:rgba(255,255,255,.03);border-top:1px solid rgba(255,255,255,.06);padding:18px 20px;opacity:0;animation:fUp .6s .88s forwards}
+.hs-inner{max-width:1200px;margin:0 auto;display:flex}
+.st{flex:1;display:flex;flex-direction:column;align-items:center;padding:0 8px;border-right:1px solid rgba(255,255,255,.06)}
+.st:last-child{border-right:none}
+.st-n{font-family:var(--serif);font-size:clamp(1.5rem,4.5vw,2.3rem);font-weight:600;color:var(--gold);line-height:1}
+.st-l{font-size:clamp(.58rem,1.7vw,.7rem);color:rgba(255,255,255,.38);letter-spacing:.05em;text-transform:uppercase;margin-top:4px;text-align:center}
 
-  .d-links { list-style:none; display:flex; flex-direction:column; gap:2px; margin-bottom:28px; }
-  .d-links a { display:block; padding:14px 16px; font-size:1.02rem; color:rgba(255,255,255,.82); text-decoration:none; font-weight:400; border-radius:var(--r); border-left:2px solid transparent; transition:all .2s; }
-  .d-links a:hover, .d-links a:active { background:rgba(255,255,255,.06); border-left-color:var(--gold); color:#fff; padding-left:22px; }
-  .d-divider { height:1px; background:rgba(255,255,255,.08); margin:18px 0; }
-  .d-cta { display:flex; align-items:center; justify-content:center; gap:10px; background:#25D366; color:#fff; padding:17px; border-radius:var(--r); font-size:1rem; font-weight:700; text-decoration:none; margin-bottom:12px; -webkit-tap-highlight-color:transparent; transition:background .2s; }
-  .d-cta:hover { background:#1ebe5a; }
-  .d-cta2 { display:flex; align-items:center; justify-content:center; gap:10px; border:1px solid rgba(201,168,76,.38); color:var(--gold); padding:14px; border-radius:var(--r); font-size:.9rem; font-weight:500; text-decoration:none; -webkit-tap-highlight-color:transparent; transition:all .2s; }
-  .d-cta2:hover { background:rgba(201,168,76,.08); border-color:var(--gold); }
-  .d-info { display:flex; flex-direction:column; gap:10px; }
-  .d-info a { font-size:.86rem; color:rgba(255,255,255,.45); text-decoration:none; }
+/* ═══════════════ ABOUT ═══════════════ */
+#about{background:var(--white)}
+.about-grid{display:grid;grid-template-columns:1fr;gap:52px;align-items:center}
+@media(min-width:880px){.about-grid{grid-template-columns:380px 1fr;gap:72px}}
+@media(min-width:1100px){.about-grid{grid-template-columns:440px 1fr;gap:88px}}
 
-  /* ══════════ HERO ══════════ */
-  #hero { min-height:100svh; background:var(--navy); display:flex; align-items:center; position:relative; overflow:hidden; padding-top:68px; }
-  .hero-bg { position:absolute; inset:0; z-index:0; background:radial-gradient(ellipse 90% 70% at 80% 50%,rgba(42,127,154,.15) 0%,transparent 60%), radial-gradient(ellipse 60% 60% at 95% 15%,rgba(201,168,76,.05) 0%,transparent 55%), linear-gradient(160deg,#0b1f3a 0%,#0d253f 55%,#101e35 100%); }
+.about-vis{position:relative;width:100%;max-width:380px;margin:0 auto}
+@media(min-width:880px){.about-vis{max-width:none;margin:0}}
+.about-frame{width:100%;aspect-ratio:4/5;max-height:480px;background:linear-gradient(145deg,#dce8f0,#c4d8e8);border-radius:var(--r);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+.about-frame::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(11,31,58,.08) 100%)}
+.about-frame-icon{font-size:clamp(5rem,10vw,8rem);position:relative;z-index:1}
+.about-tag{position:absolute;bottom:-16px;right:-12px;background:var(--navy);padding:16px 20px;border-radius:var(--r);border-left:3px solid var(--gold);box-shadow:var(--sh2)}
+.at-n{font-family:var(--serif);font-size:2rem;color:var(--gold);line-height:1;font-weight:600}
+.at-l{font-size:.68rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.07em}
 
-  .hero-ring { position:absolute; border-radius:50%; border:1px solid rgba(201,168,76,.08); animation:pRing 8s ease-in-out infinite; pointer-events:none; }
-  .hero-ring:nth-child(1) { width:420px; height:420px; right:-80px; top:50%; transform:translateY(-50%); animation-delay:0s; }
-  .hero-ring:nth-child(2) { width:640px; height:640px; right:-180px; top:50%; transform:translateY(-50%); animation-delay:1.5s; }
-  .hero-ring:nth-child(3) { width:860px; height:860px; right:-280px; top:50%; transform:translateY(-50%); animation-delay:3s; }
-  @media (max-width: 767px) {
-    .hero-ring:nth-child(1) { width:240px; height:240px; right:-60px; opacity:.45; }
-    .hero-ring:nth-child(2), .hero-ring:nth-child(3) { display:none; }
-  }
+.about-content .h2{color:var(--navy);margin-bottom:20px}
+.about-p{font-size:clamp(.92rem,1.9vw,1.01rem);line-height:1.9;color:var(--body);margin-bottom:14px;font-weight:300}
+.about-p strong{color:var(--navy);font-weight:600}
+.creds{display:flex;flex-direction:column;gap:10px;margin-top:26px}
+.cred{display:flex;align-items:flex-start;gap:14px;padding:14px 16px;background:var(--off);border-radius:var(--r);border-left:2px solid var(--teal);transition:transform .22s,box-shadow .22s}
+.cred:hover{transform:translateX(4px);box-shadow:var(--sh)}
+.cred-ico{font-size:1.3rem;flex-shrink:0;line-height:1.3}
+.cred-t strong{display:block;font-size:.87rem;color:var(--navy);font-weight:600;margin-bottom:2px}
+.cred-t span{font-size:.79rem;color:var(--muted)}
 
-  /* Two-column layout */
-  .hero-layout { position:relative; z-index:2; width:100%; max-width:1200px; margin:0 auto; padding:40px 20px 90px; display:grid; grid-template-columns:1fr; gap:40px; align-items:center; }
-  @media (min-width: 768px)  { .hero-layout { padding:60px 40px 100px; } }
-  @media (min-width: 1024px) { .hero-layout { grid-template-columns:1fr auto; gap:60px; padding:60px 60px 100px; } }
+/* ═══════════════ SERVICES ═══════════════ */
+#services{background:var(--navy);position:relative;overflow:hidden}
+#services::before{content:'';position:absolute;top:-180px;right:-180px;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(42,127,154,.1) 0%,transparent 65%);pointer-events:none}
+#services::after{content:'';position:absolute;bottom:-100px;left:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,.05) 0%,transparent 65%);pointer-events:none}
+.srv-head{max-width:560px;margin-bottom:56px}
+.srv-head .h2{color:#fff}
+.srv-head p{color:rgba(255,255,255,.48);font-size:clamp(.9rem,1.9vw,.99rem);line-height:1.82;margin-top:14px;font-weight:300}
 
-  .hero-content { max-width:580px; }
-  .hero-eyebrow { display:flex; align-items:center; gap:12px; margin-bottom:20px; opacity:0; animation:fadeUp .6s .15s forwards; }
-  .hero-eyebrow-line { width:36px; height:1px; background:var(--gold); flex-shrink:0; }
-  .hero-eyebrow span { font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); font-weight:600; }
+.srv-grid{display:grid;grid-template-columns:1fr;gap:2px}
+@media(min-width:600px){.srv-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.srv-grid{grid-template-columns:repeat(3,1fr)}}
 
-  .hero-title { font-family:var(--serif); font-size:clamp(2.5rem,8vw,4.8rem); font-weight:300; color:#fff; line-height:1.08; margin-bottom:8px; opacity:0; animation:fadeUp .6s .3s forwards; }
-  .hero-title em { font-style:italic; color:var(--gold); }
-  .hero-title strong { font-weight:600; display:block; }
+.srv{background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.05);padding:30px 24px 26px;position:relative;overflow:hidden;transition:background .3s,border-color .3s;display:flex;flex-direction:column;gap:0}
+.srv::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--teal2));transition:width .4s}
+.srv:hover{background:rgba(42,127,154,.08);border-color:rgba(42,127,154,.22)}
+.srv:hover::after{width:100%}
+.srv-n{position:absolute;top:12px;right:16px;font-family:var(--serif);font-size:3rem;font-weight:300;color:rgba(201,168,76,.08);line-height:1;pointer-events:none}
+.srv-ico{font-size:2rem;margin-bottom:18px;display:block}
+.srv-title{font-family:var(--serif);font-size:1.45rem;font-weight:400;color:#fff;margin-bottom:10px}
+.srv-text{font-size:.87rem;color:rgba(255,255,255,.44);line-height:1.76;font-weight:300;flex:1}
+.srv-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.stag{font-size:.67rem;letter-spacing:.06em;text-transform:uppercase;background:rgba(42,127,154,.18);color:var(--teal2);padding:4px 10px;border-radius:3px}
+.srv-btn{margin-top:20px;align-self:flex-start;display:inline-flex;align-items:center;gap:6px;font-size:.75rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--gold);background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.25);padding:8px 16px;border-radius:var(--r2);transition:all .22s;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.srv-btn:hover{background:rgba(201,168,76,.18);border-color:var(--gold);transform:translateY(-1px)}
 
-  .hero-spec { font-size:clamp(.78rem,2.5vw,.95rem); color:var(--teal-light); letter-spacing:.07em; text-transform:uppercase; font-weight:500; margin-bottom:22px; opacity:0; animation:fadeUp .6s .44s forwards; line-height:1.55; }
-  .hero-divider { width:50px; height:2px; background:var(--gold); margin-bottom:22px; opacity:0; animation:fadeUp .6s .52s forwards; }
-  .hero-desc { font-size:clamp(.9rem,2.5vw,1.05rem); color:rgba(255,255,255,.6); line-height:1.82; margin-bottom:32px; font-weight:300; opacity:0; animation:fadeUp .6s .62s forwards; }
+/* ═══════════════ WHY US ═══════════════ */
+#why{background:var(--off)}
+.why-grid{display:grid;grid-template-columns:1fr;gap:24px}
+@media(min-width:640px){.why-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.why-grid{grid-template-columns:repeat(4,1fr)}}
+.why-head{text-align:center;max-width:560px;margin:0 auto 52px}
+.why-head .h2{color:var(--navy)}
+.why-card{background:#fff;border-radius:var(--r);padding:28px 22px;box-shadow:var(--sh);transition:transform .3s,box-shadow .3s;text-align:center}
+.why-card:hover{transform:translateY(-4px);box-shadow:var(--sh2)}
+.why-ico{font-size:2.2rem;margin-bottom:14px;display:block}
+.why-title{font-family:var(--serif);font-size:1.2rem;font-weight:400;color:var(--navy);margin-bottom:8px}
+.why-text{font-size:.85rem;color:var(--muted);line-height:1.74;font-weight:300}
 
-  .hero-actions { display:flex; gap:12px; flex-wrap:wrap; opacity:0; animation:fadeUp .6s .76s forwards; }
+/* ═══════════════ EDUCATION ═══════════════ */
+#education{background:var(--white)}
+.edu-head{text-align:center;max-width:560px;margin:0 auto 52px}
+.edu-head .eyebrow{justify-content:center}
+.edu-head .h2{color:var(--navy)}
+.edu-head p{color:var(--muted);font-size:clamp(.9rem,1.9vw,.99rem);line-height:1.82;margin-top:14px;font-weight:300}
 
-  /* Buttons */
-  .btn-p { display:inline-flex; align-items:center; gap:8px; background:var(--gold); color:var(--navy); padding:15px 28px; border-radius:var(--r); font-weight:700; font-size:.88rem; letter-spacing:.05em; text-transform:uppercase; text-decoration:none; transition:all .22s; white-space:nowrap; min-height:52px; -webkit-tap-highlight-color:transparent; }
-  .btn-p:hover { background:var(--gold-light); transform:translateY(-2px); box-shadow:0 8px 28px rgba(201,168,76,.28); }
-  .btn-o { display:inline-flex; align-items:center; gap:8px; border:1.5px solid rgba(255,255,255,.28); color:rgba(255,255,255,.82); padding:15px 24px; border-radius:var(--r); font-weight:400; font-size:.88rem; letter-spacing:.05em; text-transform:uppercase; text-decoration:none; transition:all .22s; white-space:nowrap; min-height:52px; -webkit-tap-highlight-color:transparent; }
-  .btn-o:hover { border-color:rgba(255,255,255,.65); color:#fff; }
+.art-grid{display:grid;grid-template-columns:1fr;gap:20px}
+@media(min-width:640px){.art-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.art-grid{grid-template-columns:repeat(3,1fr)}}
+.art{background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column}
+.art:hover{transform:translateY(-5px);box-shadow:var(--sh2)}
+.art-img{height:164px;display:flex;align-items:center;justify-content:center;font-size:3.2rem;flex-shrink:0;position:relative}
+.art-img::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.15) 100%)}
+.ai1{background:linear-gradient(135deg,#0b2040,#1a3a5e)}
+.ai2{background:linear-gradient(135deg,#0e2d48,#1e5474)}
+.ai3{background:linear-gradient(135deg,#123050,#1a5e7a)}
+.ai4{background:linear-gradient(135deg,#0d2540,#152e55)}
+.ai5{background:linear-gradient(135deg,#0f2a46,#1e4d70)}
+.ai6{background:linear-gradient(135deg,#112640,#1d4a68)}
+.art-body{padding:20px;flex:1;display:flex;flex-direction:column;gap:8px}
+.art-cat{font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);font-weight:600}
+.art-title{font-family:var(--serif);font-size:1.2rem;font-weight:400;color:var(--navy);line-height:1.35}
+.art-text{font-size:.85rem;color:var(--muted);line-height:1.72;font-weight:300;flex:1}
+.art-more{align-self:flex-start;margin-top:12px;font-size:.75rem;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--teal);background:rgba(42,127,154,.08);border:1px solid rgba(42,127,154,.2);padding:7px 14px;border-radius:var(--r2);transition:all .22s;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.art-more:hover{background:rgba(42,127,154,.16);border-color:var(--teal);transform:translateY(-1px)}
 
-  /* Hero visual (desktop only) */
-  .hero-visual { display:none; justify-content:center; align-items:flex-end; }
-  @media (min-width: 1024px) { .hero-visual { display:flex; } }
-  .hero-doc-wrap { display:flex; flex-direction:column; align-items:center; gap:16px; }
-  .doc-sil { width:300px; height:420px; background:linear-gradient(180deg,rgba(42,127,154,.14) 0%,rgba(42,127,154,.06) 50%,transparent 100%); border-radius:50% 50% 0 0 / 35% 35% 0 0; border-top:1px solid rgba(42,127,154,.22); display:flex; align-items:center; justify-content:center; }
-  .doc-icon { font-size:9rem; filter:drop-shadow(0 0 36px rgba(42,127,154,.35)); animation:float 6s ease-in-out infinite; }
-  .hero-badge { background:rgba(201,168,76,.1); border:1px solid rgba(201,168,76,.22); border-radius:40px; padding:8px 22px; font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:var(--gold); font-weight:500; text-align:center; }
+/* ═══════════════ INSTAGRAM ═══════════════ */
+#instagram{background:var(--navy2)}
+.ig-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:32px}
+.ig-title{font-family:var(--serif);font-size:clamp(1.5rem,3.5vw,2rem);font-weight:300;color:#fff}
+.ig-title em{color:var(--gold);font-style:italic}
+.posts{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+@media(min-width:640px){.posts{grid-template-columns:repeat(4,1fr)}}
+.post{aspect-ratio:1;border-radius:var(--r);display:flex;align-items:center;justify-content:center;font-size:2rem;position:relative;overflow:hidden;cursor:pointer;transition:transform .3s;-webkit-tap-highlight-color:transparent}
+.post:hover{transform:scale(1.03)}
+.post:hover .pov{opacity:1}
+.pc1{background:linear-gradient(135deg,#0f2d4a,#1a4a6e)}
+.pc2{background:linear-gradient(135deg,#123850,#1e5f7a)}
+.pc3{background:linear-gradient(135deg,#0e2c42,#1d4770)}
+.pc4{background:linear-gradient(135deg,#152340,#243d62)}
+.pov{position:absolute;inset:0;background:rgba(42,127,154,.35);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .3s;font-size:1.5rem}
+.ig-cta{text-align:center;margin-top:32px;display:flex;flex-direction:column;align-items:center;gap:14px}
+.ig-cta p{font-size:.9rem;color:rgba(255,255,255,.45);font-weight:300}
 
-  /* Stats strip */
-  .hero-stats { position:absolute; bottom:0; left:0; right:0; z-index:2; background:rgba(255,255,255,.03); border-top:1px solid rgba(255,255,255,.06); padding:18px 20px; opacity:0; animation:fadeUp .6s .95s forwards; }
-  .hero-stats-inner { max-width:1200px; margin:0 auto; display:flex; }
-  .stat-item { flex:1; display:flex; flex-direction:column; align-items:center; padding:0 8px; border-right:1px solid rgba(255,255,255,.07); }
-  .stat-item:last-child { border-right:none; }
-  .stat-num { font-family:var(--serif); font-size:clamp(1.5rem,5vw,2.4rem); font-weight:600; color:var(--gold); line-height:1; }
-  .stat-label { font-size:clamp(.6rem,1.8vw,.72rem); color:rgba(255,255,255,.42); letter-spacing:.05em; text-transform:uppercase; margin-top:4px; text-align:center; }
+/* ═══════════════ CONTACT ═══════════════ */
+#contact{background:var(--white)}
+.ct-grid{display:grid;grid-template-columns:1fr;gap:52px;align-items:start}
+@media(min-width:900px){.ct-grid{grid-template-columns:1fr 1fr;gap:72px}}
+.ct-left .h2{color:var(--navy);margin-bottom:14px}
+.ct-left>p{color:var(--muted);font-size:clamp(.9rem,1.9vw,.99rem);line-height:1.82;font-weight:300;margin-bottom:30px}
+.ct-cards{display:flex;flex-direction:column;gap:12px}
+.ct-card{display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:var(--r);border:1px solid var(--off);transition:all .25s;min-height:70px;-webkit-tap-highlight-color:transparent}
+.ct-card:hover{border-color:var(--teal);background:rgba(42,127,154,.04);transform:translateX(4px);box-shadow:var(--sh)}
+.ct-ico{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.ci1{background:#e7f8ef}.ci2{background:#e7f8ef}.ci3{background:#fce4ec}
+.ct-txt{flex:1;min-width:0}
+.ct-txt strong{display:block;font-size:.87rem;color:var(--navy);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ct-txt span{font-size:.79rem;color:var(--muted)}
+.ct-arr{color:var(--teal);font-size:.95rem;flex-shrink:0;opacity:0;transition:opacity .25s}
+.ct-card:hover .ct-arr{opacity:1}
 
-  /* ══════════ ABOUT ══════════ */
-  #about { background:var(--white); }
-  .about-grid { display:grid; grid-template-columns:1fr; gap:48px; align-items:center; }
-  @media (min-width: 900px)  { .about-grid { grid-template-columns:340px 1fr; gap:64px; } }
-  @media (min-width: 1100px) { .about-grid { grid-template-columns:400px 1fr; gap:80px; } }
+.form-box{background:var(--navy);border-radius:var(--r);padding:clamp(24px,5vw,44px);position:relative;overflow:hidden}
+.form-box::before{content:'';position:absolute;top:-60px;right:-60px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(42,127,154,.18) 0%,transparent 68%);pointer-events:none}
+.form-title{font-family:var(--serif);font-size:clamp(1.5rem,3.5vw,1.9rem);font-weight:300;color:#fff;margin-bottom:6px}
+.form-sub{font-size:.84rem;color:rgba(255,255,255,.4);margin-bottom:22px;font-weight:300}
+.fg{margin-bottom:14px}
+.fg label{display:block;font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.42);margin-bottom:6px;font-weight:500}
+.fc{width:100%;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:4px;padding:13px 14px;color:#fff;font-family:var(--sans);font-size:.9rem;transition:border-color .2s,background .2s;outline:none;-webkit-appearance:none;appearance:none;min-height:48px}
+.fc::placeholder{color:rgba(255,255,255,.2)}
+.fc:focus{border-color:var(--teal2);background:rgba(255,255,255,.07)}
+select.fc option{background:#0d253f;color:#fff}
+textarea.fc{height:90px;resize:vertical;min-height:76px}
+.fr{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:480px){.fr{grid-template-columns:1fr 1fr}}
 
-  .about-visual { position:relative; width:100%; max-width:380px; margin:0 auto; }
-  @media (min-width: 900px) { .about-visual { max-width:none; margin:0; } }
+/* ═══════════════ FOOTER ═══════════════ */
+footer{background:#050e1c;padding:56px 0 26px}
+.ft-grid{display:grid;grid-template-columns:1fr;gap:36px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.05);margin-bottom:22px}
+@media(min-width:640px){.ft-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:900px){.ft-grid{grid-template-columns:2fr 1fr 1fr;gap:64px}}
+.ft-logo{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.ft-logo-c{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--teal2));display:flex;align-items:center;justify-content:center;font-size:.88rem;flex-shrink:0}
+.ft-logo-t{font-family:var(--serif);font-size:.95rem;color:#fff;font-weight:300}
+.ft-logo-t b{color:var(--gold)}
+.ft-brand p{font-size:.83rem;color:rgba(255,255,255,.33);line-height:1.82;font-weight:300;max-width:260px}
+.ft-h{font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:14px}
+.ft-ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.ft-ul a{font-size:.83rem;color:rgba(255,255,255,.38);transition:color .2s}
+.ft-ul a:hover{color:var(--gold)}
+.ft-bot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.ft-bot p{font-size:.76rem;color:rgba(255,255,255,.18)}
 
-  .about-frame { width:100%; aspect-ratio:3/4; max-height:460px; background:linear-gradient(145deg,#dce6ef 0%,#c8d8e8 100%); border-radius:var(--r); display:flex; align-items:center; justify-content:center; overflow:hidden; position:relative; }
-  .about-frame::after { content:''; position:absolute; inset:0; background:linear-gradient(180deg,transparent 55%,rgba(11,31,58,.07) 100%); }
-  .about-doc-icon { font-size:clamp(5rem,10vw,7rem); position:relative; z-index:1; }
-  .about-accent { position:absolute; bottom:-18px; right:-12px; background:var(--navy); padding:16px 20px; border-radius:var(--r); border-left:3px solid var(--gold); box-shadow:var(--sh-lg); }
-  @media (max-width: 400px) { .about-accent { bottom:-12px; right:-6px; padding:12px 14px; } }
-  .acc-num { font-family:var(--serif); font-size:2rem; color:var(--gold); line-height:1; font-weight:600; }
-  .acc-label { font-size:.68rem; color:rgba(255,255,255,.52); text-transform:uppercase; letter-spacing:.06em; }
+/* ═══════════════ FLOATING WA ═══════════════ */
+.wa-float{position:fixed;bottom:22px;right:18px;z-index:200;width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.7rem;box-shadow:0 4px 22px rgba(37,211,102,.4);transition:transform .22s,box-shadow .22s;animation:bIn .5s 1.3s both;-webkit-tap-highlight-color:transparent}
+.wa-float:hover{transform:scale(1.1);box-shadow:0 8px 32px rgba(37,211,102,.5)}
+@media(min-width:900px){.wa-float{bottom:30px;right:28px}}
 
-  .about-content .stitle { color:var(--navy); margin-bottom:20px; }
-  .about-content p { font-size:clamp(.9rem,2vw,1rem); line-height:1.88; color:var(--text-body); margin-bottom:14px; font-weight:300; }
-  .about-content p strong { color:var(--navy); font-weight:600; }
+/* ═══════════════ MODAL SYSTEM ═══════════════ */
+.modal-overlay{position:fixed;inset:0;z-index:500;background:rgba(6,14,26,.78);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .3s}
+.modal-overlay.active{opacity:1;pointer-events:all}
+.modal{background:#fff;border-radius:var(--r);width:100%;max-width:680px;max-height:90svh;overflow-y:auto;position:relative;transform:translateY(24px) scale(.97);transition:transform .3s,opacity .3s;opacity:0}
+.modal-overlay.active .modal{transform:none;opacity:1}
+.modal-close{position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:50%;background:var(--off);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--muted);transition:all .2s;z-index:10;-webkit-tap-highlight-color:transparent}
+.modal-close:hover{background:var(--navy);color:#fff}
+.modal-header{padding:32px 32px 0}
+.modal-header-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(42,127,154,.08);color:var(--teal);border:1px solid rgba(42,127,154,.2);border-radius:20px;padding:5px 14px;font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px}
+.modal-title{font-family:var(--serif);font-size:clamp(1.6rem,4vw,2.2rem);font-weight:300;color:var(--navy);line-height:1.2;margin-bottom:8px}
+.modal-title em{font-style:italic;color:var(--teal)}
+.modal-subtitle{font-size:.9rem;color:var(--muted);font-weight:300;margin-bottom:0}
+.modal-body{padding:24px 32px 32px}
+.modal-body p{font-size:.95rem;line-height:1.88;color:var(--body);margin-bottom:14px;font-weight:300}
+.modal-body p:last-child{margin-bottom:0}
+.modal-body strong{color:var(--navy);font-weight:600}
+.modal-divider{height:1px;background:var(--off);margin:20px 0}
+.modal-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin:16px 0}
+.modal-list li{display:flex;align-items:flex-start;gap:10px;font-size:.9rem;color:var(--body);line-height:1.65;font-weight:300}
+.modal-list li::before{content:'→';color:var(--teal);font-weight:600;flex-shrink:0;margin-top:1px}
+.modal-footer{padding:0 32px 28px;display:flex;gap:10px;flex-wrap:wrap}
+@media(max-width:480px){.modal-header,.modal-body,.modal-footer{padding-left:20px;padding-right:20px}}
 
-  .credentials { display:flex; flex-direction:column; gap:10px; margin-top:24px; }
-  .cred { display:flex; align-items:flex-start; gap:14px; padding:14px 16px; background:var(--off-white); border-radius:var(--r); border-left:2px solid var(--teal); transition:transform .2s,box-shadow .2s; }
-  .cred:hover { transform:translateX(4px); box-shadow:var(--sh); }
-  .cred-ico { font-size:1.3rem; flex-shrink:0; line-height:1.3; }
-  .cred-text strong { display:block; font-size:.87rem; color:var(--navy); font-weight:600; margin-bottom:2px; }
-  .cred-text span { font-size:.79rem; color:var(--text-muted); }
+/* Dark modal variant */
+.modal.dark{background:var(--navy)}
+.modal.dark .modal-close{background:rgba(255,255,255,.08);color:rgba(255,255,255,.6)}
+.modal.dark .modal-close:hover{background:var(--gold);color:var(--navy)}
+.modal.dark .modal-title{color:#fff}
+.modal.dark .modal-subtitle{color:rgba(255,255,255,.45)}
+.modal.dark .modal-body p{color:rgba(255,255,255,.62)}
+.modal.dark .modal-body strong{color:var(--gold)}
+.modal.dark .modal-divider{background:rgba(255,255,255,.07)}
+.modal.dark .modal-list li{color:rgba(255,255,255,.62)}
+.modal.dark .modal-list li::before{color:var(--teal2)}
 
-  /* ══════════ SERVICES ══════════ */
-  #services { background:var(--navy); position:relative; overflow:hidden; }
-  #services::before { content:''; position:absolute; top:-200px; right:-200px; width:600px; height:600px; border-radius:50%; background:radial-gradient(circle,rgba(42,127,154,.09) 0%,transparent 65%); pointer-events:none; }
+/* ═══════════════ SCROLL REVEAL ═══════════════ */
+.rv,.rvl,.rvr{opacity:0;transition:opacity .65s ease,transform .65s ease}
+.rv{transform:translateY(22px)}.rvl{transform:translateX(-22px)}.rvr{transform:translateX(22px)}
+.vis{opacity:1!important;transform:none!important}
+.d1{transition-delay:.08s}.d2{transition-delay:.17s}.d3{transition-delay:.26s}.d4{transition-delay:.35s}.d5{transition-delay:.44s}
 
-  .srv-header { max-width:560px; margin-bottom:48px; }
-  @media (min-width: 768px) { .srv-header { margin-bottom:60px; } }
-  .srv-header .stitle { color:#fff; }
-  .srv-header p { color:rgba(255,255,255,.5); font-size:clamp(.88rem,2vw,1rem); line-height:1.8; margin-top:14px; font-weight:300; }
+/* ═══════════════ ANIMATIONS ═══════════════ */
+@keyframes fUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes pRing{0%,100%{opacity:.12;transform:translateY(-50%) scale(1)}50%{opacity:.05;transform:translateY(-50%) scale(1.024)}}
+@keyframes bIn{0%{opacity:0;transform:scale(.4)}70%{transform:scale(1.1)}100%{opacity:1;transform:scale(1)}}
 
-  .srv-grid { display:grid; grid-template-columns:1fr; gap:2px; }
-  @media (min-width: 600px)  { .srv-grid { grid-template-columns:repeat(2,1fr); } }
-  @media (min-width: 1024px) { .srv-grid { grid-template-columns:repeat(3,1fr); } }
-
-  .srv-card { background:rgba(255,255,255,.025); border:1px solid rgba(255,255,255,.05); padding:28px 22px; position:relative; overflow:hidden; transition:background .3s,border-color .3s; cursor:default; }
-  .srv-card::after { content:''; position:absolute; bottom:0; left:0; width:0; height:2px; background:var(--gold); transition:width .4s; }
-  .srv-card:hover { background:rgba(42,127,154,.07); border-color:rgba(42,127,154,.22); }
-  .srv-card:hover::after { width:100%; }
-  .srv-n { position:absolute; top:14px; right:16px; font-family:var(--serif); font-size:3rem; font-weight:300; color:rgba(201,168,76,.09); line-height:1; pointer-events:none; }
-  .srv-ico { font-size:2rem; margin-bottom:16px; display:block; }
-  .srv-title { font-family:var(--serif); font-size:1.42rem; font-weight:400; color:#fff; margin-bottom:10px; }
-  .srv-desc { font-size:.87rem; color:rgba(255,255,255,.46); line-height:1.75; font-weight:300; }
-  .srv-tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:16px; }
-  .tag { font-size:.67rem; letter-spacing:.06em; text-transform:uppercase; background:rgba(42,127,154,.18); color:var(--teal-light); padding:4px 10px; border-radius:3px; }
-
-  /* ══════════ EDUCATION ══════════ */
-  #education { background:var(--off-white); }
-  .edu-header { text-align:center; max-width:560px; margin:0 auto 48px; }
-  @media (min-width: 768px) { .edu-header { margin-bottom:64px; } }
-  .edu-header .label { justify-content:center; }
-  .edu-header .stitle { color:var(--navy); }
-  .edu-header p { color:var(--text-muted); font-size:clamp(.88rem,2vw,1rem); line-height:1.8; margin-top:14px; font-weight:300; }
-
-  .art-grid { display:grid; grid-template-columns:1fr; gap:20px; }
-  @media (min-width: 640px)  { .art-grid { grid-template-columns:repeat(2,1fr); } }
-  @media (min-width: 1024px) { .art-grid { grid-template-columns:repeat(3,1fr); } }
-
-  .art-card { background:#fff; border-radius:var(--r); overflow:hidden; box-shadow:var(--sh); transition:transform .3s,box-shadow .3s; display:flex; flex-direction:column; }
-  .art-card:hover { transform:translateY(-5px); box-shadow:var(--sh-lg); }
-  .art-img { height:160px; display:flex; align-items:center; justify-content:center; font-size:3.2rem; flex-shrink:0; }
-  @media (min-width: 768px) { .art-img { height:180px; } }
-  .bg1 { background:linear-gradient(135deg,var(--navy),var(--navy-light)); }
-  .bg2 { background:linear-gradient(135deg,#12384f,#1e5f7a); }
-  .bg3 { background:linear-gradient(135deg,var(--teal),#1a5e78); }
-  .art-body { padding:20px; flex:1; display:flex; flex-direction:column; gap:8px; }
-  .art-cat { font-size:.68rem; letter-spacing:.1em; text-transform:uppercase; color:var(--teal); font-weight:600; }
-  .art-title { font-family:var(--serif); font-size:1.2rem; font-weight:400; color:var(--navy); line-height:1.35; }
-  .art-exc { font-size:.85rem; color:var(--text-muted); line-height:1.72; font-weight:300; flex:1; }
-
-  /* ══════════ INSTAGRAM ══════════ */
-  #instagram { background:var(--navy-mid); }
-  .ig-header { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; margin-bottom:28px; }
-  @media (min-width: 768px) { .ig-header { margin-bottom:36px; } }
-  .ig-title { font-family:var(--serif); font-size:clamp(1.4rem,4vw,2rem); font-weight:300; color:#fff; }
-  .ig-title span { color:var(--gold); font-style:italic; }
-  .btn-ig { display:inline-flex; align-items:center; gap:8px; border:1px solid rgba(201,168,76,.36); color:var(--gold); padding:10px 20px; border-radius:var(--r); font-size:.77rem; letter-spacing:.08em; text-transform:uppercase; text-decoration:none; transition:all .2s; font-weight:500; white-space:nowrap; -webkit-tap-highlight-color:transparent; }
-  .btn-ig:hover { background:rgba(201,168,76,.08); border-color:var(--gold); }
-
-  .posts-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:8px; }
-  @media (min-width: 640px) { .posts-grid { grid-template-columns:repeat(4,1fr); } }
-  .post-tile { aspect-ratio:1; border-radius:var(--r); display:flex; align-items:center; justify-content:center; font-size:2.2rem; position:relative; overflow:hidden; cursor:pointer; transition:transform .3s; -webkit-tap-highlight-color:transparent; }
-  .post-tile:hover { transform:scale(1.03); }
-  .post-tile:hover .po { opacity:1; }
-  .pt1 { background:linear-gradient(135deg,#0f2d4a,#1a4a6e); }
-  .pt2 { background:linear-gradient(135deg,#123850,#1e5f7a); }
-  .pt3 { background:linear-gradient(135deg,#0e2c42,#1d4770); }
-  .pt4 { background:linear-gradient(135deg,#152340,#243d62); }
-  .po { position:absolute; inset:0; background:rgba(42,127,154,.35); display:flex; align-items:center; justify-content:center; opacity:0; transition:opacity .3s; font-size:1.6rem; }
-
-  /* ══════════ CONTACT ══════════ */
-  #contact { background:var(--white); }
-  .ct-grid { display:grid; grid-template-columns:1fr; gap:48px; align-items:start; }
-  @media (min-width: 900px) { .ct-grid { grid-template-columns:1fr 1fr; gap:64px; } }
-
-  .ct-left .stitle { color:var(--navy); margin-bottom:12px; }
-  .ct-left > p { color:var(--text-muted); font-size:clamp(.88rem,2vw,1rem); line-height:1.8; font-weight:300; margin-bottom:28px; }
-
-  .ct-cards { display:flex; flex-direction:column; gap:12px; }
-  .ct-card { display:flex; align-items:center; gap:14px; padding:16px 18px; border-radius:var(--r); border:1px solid var(--off-white); text-decoration:none; transition:all .25s; min-height:72px; -webkit-tap-highlight-color:transparent; }
-  .ct-card:hover { border-color:var(--teal); background:rgba(42,127,154,.04); transform:translateX(4px); box-shadow:var(--sh); }
-  .ct-ico { width:46px; height:46px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.2rem; flex-shrink:0; }
-  .ic1 { background:#e7f8ef; } .ic2 { background:#e7f8ef; } .ic3 { background:#fce4ec; }
-  .ct-txt { flex:1; min-width:0; }
-  .ct-txt strong { display:block; font-size:.87rem; color:var(--navy); font-weight:600; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-  .ct-txt span { font-size:.79rem; color:var(--text-muted); }
-  .ct-arr { color:var(--teal); font-size:1rem; flex-shrink:0; opacity:0; transition:opacity .25s; }
-  .ct-card:hover .ct-arr { opacity:1; }
-
-  /* Form */
-  .form-panel { background:var(--navy); border-radius:var(--r); padding:clamp(22px,5vw,44px); position:relative; overflow:hidden; }
-  .form-panel::before { content:''; position:absolute; top:-50px; right:-50px; width:200px; height:200px; border-radius:50%; background:radial-gradient(circle,rgba(42,127,154,.18) 0%,transparent 70%); pointer-events:none; }
-  .form-title { font-family:var(--serif); font-size:clamp(1.45rem,4vw,1.85rem); font-weight:300; color:#fff; margin-bottom:6px; }
-  .form-sub { font-size:.84rem; color:rgba(255,255,255,.42); margin-bottom:22px; font-weight:300; }
-
-  .fg { margin-bottom:14px; }
-  .fg label { display:block; font-size:.71rem; letter-spacing:.06em; text-transform:uppercase; color:rgba(255,255,255,.43); margin-bottom:6px; font-weight:500; }
-  .fc { width:100%; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1); border-radius:4px; padding:13px 14px; color:#fff; font-family:var(--sans); font-size:.9rem; transition:border-color .2s; outline:none; -webkit-appearance:none; appearance:none; min-height:48px; }
-  .fc::placeholder { color:rgba(255,255,255,.2); }
-  .fc:focus { border-color:var(--teal-light); background:rgba(255,255,255,.07); }
-  select.fc option { background:#0d253f; color:#fff; }
-  textarea.fc { height:92px; resize:vertical; min-height:80px; }
-  .fr { display:grid; grid-template-columns:1fr; gap:14px; }
-  @media (min-width: 480px) { .fr { grid-template-columns:1fr 1fr; } }
-
-  .btn-sub { width:100%; background:var(--gold); color:var(--navy); border:none; padding:16px 20px; border-radius:var(--r); font-family:var(--sans); font-size:.9rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:8px; transition:all .22s; min-height:56px; -webkit-tap-highlight-color:transparent; }
-  .btn-sub:hover { background:var(--gold-light); transform:translateY(-2px); box-shadow:0 6px 22px rgba(201,168,76,.28); }
-
-  /* ══════════ FOOTER ══════════ */
-  footer { background:#060f1c; padding:60px 0 28px; }
-  .ft-grid { display:grid; grid-template-columns:1fr; gap:36px; padding-bottom:36px; border-bottom:1px solid rgba(255,255,255,.06); margin-bottom:24px; }
-  @media (min-width: 640px)  { .ft-grid { grid-template-columns:repeat(2,1fr); } }
-  @media (min-width: 900px)  { .ft-grid { grid-template-columns:2fr 1fr 1fr; gap:60px; } }
-  .ft-logo { display:flex; align-items:center; gap:10px; text-decoration:none; margin-bottom:14px; }
-  .ft-logo-ico { width:34px; height:34px; border-radius:50%; background:linear-gradient(135deg,var(--teal),var(--teal-light)); display:flex; align-items:center; justify-content:center; font-size:.9rem; }
-  .ft-logo-txt { font-family:var(--serif); font-size:.96rem; color:#fff; font-weight:300; }
-  .ft-logo-txt span { color:var(--gold); }
-  .ft-brand p { font-size:.84rem; color:rgba(255,255,255,.36); line-height:1.8; font-weight:300; max-width:260px; }
-  .ft-h { font-size:.71rem; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); font-weight:600; margin-bottom:14px; }
-  .ft-links { list-style:none; display:flex; flex-direction:column; gap:10px; }
-  .ft-links a { font-size:.84rem; color:rgba(255,255,255,.4); text-decoration:none; transition:color .2s; }
-  .ft-links a:hover { color:var(--gold); }
-  .ft-bot { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; }
-  .ft-bot p { font-size:.77rem; color:rgba(255,255,255,.2); }
-
-  /* ══════════ WA FLOAT ══════════ */
-  .wa-float { position:fixed; bottom:22px; right:18px; z-index:150; width:58px; height:58px; border-radius:50%; background:#25D366; color:#fff; display:flex; align-items:center; justify-content:center; font-size:1.7rem; text-decoration:none; box-shadow:0 4px 20px rgba(37,211,102,.38); transition:transform .22s,box-shadow .22s; animation:bounceIn .5s 1.2s both; -webkit-tap-highlight-color:transparent; }
-  .wa-float:hover { transform:scale(1.1); box-shadow:0 8px 32px rgba(37,211,102,.48); }
-  @media (min-width: 900px) { .wa-float { bottom:32px; right:28px; } }
-
-  /* ══════════ ANIMATIONS ══════════ */
-  @keyframes fadeUp  { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:none} }
-  @keyframes float   { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
-  @keyframes pRing   { 0%,100%{opacity:.12;transform:translateY(-50%) scale(1)} 50%{opacity:.05;transform:translateY(-50%) scale(1.024)} }
-  @keyframes bounceIn{ 0%{opacity:0;transform:scale(.4)} 70%{transform:scale(1.12)} 100%{opacity:1;transform:scale(1)} }
-
-  /* Scroll reveal */
-  .rv,.rvl,.rvr { opacity:0; transition:opacity .65s ease,transform .65s ease; }
-  .rv  { transform:translateY(22px); }
-  .rvl { transform:translateX(-22px); }
-  .rvr { transform:translateX(22px); }
-  .vis { opacity:1 !important; transform:none !important; }
-  .d1{transition-delay:.08s} .d2{transition-delay:.18s} .d3{transition-delay:.28s} .d4{transition-delay:.38s} .d5{transition-delay:.48s}
-
-  @media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.01ms !important; transition-duration:.01ms !important; } }
-  </style>
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
 </head>
 <body>
 
-<!-- ════ NAV ════ -->
-<nav id="navbar">
-  <div class="nav-inner">
-    <a href="#hero" class="nav-logo">
-      <div class="nav-logo-icon">🩺</div>
-      <span class="nav-logo-text">Dr. <span>Vera</span> Vélez</span>
-    </a>
+<!-- ═══ NAV ═══ -->
+<nav id="nav">
+  <div class="nav-wrap">
+    <div class="logo">
+      <div class="logo-circle">🩺</div>
+      <span class="logo-text">Dr. <b>Vera Vélez</b></span>
+    </div>
     <ul class="nav-links">
-      <li><a href="#about">Quiénes Somos</a></li>
-      <li><a href="#services">Servicios</a></li>
-      <li><a href="#education">Educación</a></li>
+      <li><a href="#about">Nosotros</a></li>
+      <li><a href="#services">Especialidades</a></li>
+      <li><a href="#education">Información</a></li>
       <li><a href="#contact">Contacto</a></li>
     </ul>
-    <a href="https://wa.me/593980190654" target="_blank" rel="noopener" class="nav-cta">Agendar Cita</a>
-    <button class="ham" id="hamBtn" aria-label="Abrir menú" aria-expanded="false">
+    <a href="https://wa.me/593980190654" target="_blank" rel="noopener" class="btn btn-gold nav-cta" style="padding:10px 20px;font-size:.77rem">💬 Agendar Cita</a>
+    <button class="ham" id="hamBtn" aria-label="Menú" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
 
 <!-- Mobile Drawer -->
-<div class="drawer" id="drawer" role="dialog" aria-label="Navegación">
-  <ul class="d-links">
-    <li><a href="#about"     class="dl">👤 Quiénes Somos</a></li>
-    <li><a href="#services"  class="dl">⚕️ Servicios</a></li>
-    <li><a href="#education" class="dl">📖 Educación</a></li>
-    <li><a href="#instagram" class="dl">📷 Instagram</a></li>
-    <li><a href="#contact"   class="dl">📬 Contacto</a></li>
+<div class="drawer" id="drawer">
+  <ul class="d-nav">
+    <li><a href="#about"     class="dl">👤&nbsp; Nosotros</a></li>
+    <li><a href="#services"  class="dl">⚕️&nbsp; Especialidades</a></li>
+    <li><a href="#education" class="dl">📖&nbsp; Información</a></li>
+    <li><a href="#instagram" class="dl">📷&nbsp; Instagram</a></li>
+    <li><a href="#contact"   class="dl">📬&nbsp; Contacto</a></li>
   </ul>
-  <div class="d-divider"></div>
-  <a href="https://wa.me/593980190654" target="_blank" rel="noopener" class="d-cta dl">
-    💬 &nbsp;WhatsApp · 0980 190 654
-  </a>
-  <a href="https://wa.me/593993902554" target="_blank" rel="noopener" class="d-cta2 dl">
-    🏥 &nbsp;Omnihospital · 0993 902 554
-  </a>
-  <div class="d-divider"></div>
-  <div class="d-info">
-    <a href="https://www.instagram.com/v.g_allergy/" target="_blank" rel="noopener">📷 @v.g_allergy</a>
+  <div class="d-sep"></div>
+  <div class="d-btns">
+    <a href="https://wa.me/593980190654" target="_blank" rel="noopener" class="btn btn-wa dl" style="justify-content:center;font-size:.92rem">💬&nbsp; WhatsApp · 0980 190 654</a>
+    <a href="https://wa.me/593993902554" target="_blank" rel="noopener" class="btn btn-ghost dl" style="justify-content:center;font-size:.88rem">🏥&nbsp; Omnihospital · 0993 902 554</a>
+    <a href="https://www.instagram.com/v.g_allergy/" target="_blank" rel="noopener" class="btn btn-outline-gold dl" style="justify-content:center;font-size:.88rem">📷&nbsp; @v.g_allergy</a>
   </div>
 </div>
 
-
-<!-- ════ HERO ════ -->
+<!-- ═══ HERO ═══ -->
 <section id="hero">
   <div class="hero-bg"></div>
-  <div class="hero-ring"></div>
-  <div class="hero-ring"></div>
-  <div class="hero-ring"></div>
+  <div class="hero-ring hr1"></div>
+  <div class="hero-ring hr2"></div>
+  <div class="hero-ring hr3"></div>
 
-  <div class="hero-layout">
-    <div class="hero-content">
+  <div class="hero-grid">
+    <div>
       <div class="hero-eyebrow">
-        <span class="hero-eyebrow-line"></span>
-        <span>Inmunólogo Clínico Certificado</span>
+        <span class="hero-line"></span>
+        <span>Centro de Alergia, Asma y Piel · Ecuador</span>
       </div>
-      <h1 class="hero-title">
+      <h1 class="hero-name">
         Dr. Libio<br>
         <strong>Vera <em>Vélez</em></strong>
       </h1>
-      <p class="hero-spec">Especialista en Alergias · Asma · Dermatología Inmunológica</p>
-      <div class="hero-divider"></div>
+      <p class="hero-role">Inmunólogo Clínico · Alergólogo · Especialista en Piel</p>
+      <div class="hero-bar"></div>
       <p class="hero-desc">
-        Medicina personalizada y de alta especialidad para niños y adultos.
-        Donde la ciencia inmunológica se une con la nutrición y la longevidad
-        para transformar tu calidad de vida.
+        Donde la medicina de precisión se convierte en calidad de vida. 
+        Diagnóstico avanzado, tratamientos personalizados y una visión integral 
+        de la salud para niños y adultos — porque cada paciente merece atención 
+        construida a su medida.
       </p>
       <div class="hero-actions">
-        <a href="https://wa.me/593980190654" target="_blank" rel="noopener" class="btn-p">💬 Agendar Cita</a>
-        <a href="#about" class="btn-o">Conocer más →</a>
+        <a href="https://wa.me/593980190654" target="_blank" rel="noopener" class="btn btn-gold">💬 Agendar Cita</a>
+        <button class="btn btn-outline-white" onclick="openModal('modal-about')">Conocer al Dr. →</button>
       </div>
     </div>
-    <!-- Desktop visual -->
+
     <div class="hero-visual">
-      <div class="hero-doc-wrap">
-        <div class="doc-sil"><span class="doc-icon">👨‍⚕️</span></div>
-        <div class="hero-badge">Centro de Alergia, Asma y Piel</div>
+      <div class="hv-card">
+        <span class="hv-icon">👨‍⚕️</span>
+        <div>
+          <div class="hv-title">Centro de <span>Alergia, Asma</span> y Piel</div>
+        </div>
+        <div class="hv-pills">
+          <span class="hv-pill">Inmunología</span>
+          <span class="hv-pill">Alergias</span>
+          <span class="hv-pill">Asma</span>
+          <span class="hv-pill">Piel</span>
+          <span class="hv-pill">Longevidad</span>
+        </div>
+        <a href="https://wa.me/593980190654" target="_blank" rel="noopener" class="btn btn-teal" style="width:100%;justify-content:center">💬 Consultar ahora</a>
       </div>
     </div>
   </div>
 
-  <!-- Stats -->
   <div class="hero-stats">
-    <div class="hero-stats-inner">
-      <div class="stat-item"><span class="stat-num">15+</span><span class="stat-label">Años de experiencia</span></div>
-      <div class="stat-item"><span class="stat-num">5K+</span><span class="stat-label">Pacientes</span></div>
-      <div class="stat-item"><span class="stat-num">5</span><span class="stat-label">Especialidades</span></div>
+    <div class="hs-inner">
+      <div class="st"><span class="st-n">15+</span><span class="st-l">Años de práctica</span></div>
+      <div class="st"><span class="st-n">5K+</span><span class="st-l">Pacientes tratados</span></div>
+      <div class="st"><span class="st-n">5</span><span class="st-l">Especialidades</span></div>
     </div>
   </div>
 </section>
 
-
-<!-- ════ ABOUT ════ -->
+<!-- ═══ ABOUT ═══ -->
 <section id="about" class="sp">
-  <div class="container">
+  <div class="wrap">
     <div class="about-grid">
-      <div class="about-visual rvl">
-        <div class="about-frame">
-          <span class="about-doc-icon">🩺</span>
-        </div>
-        <div class="about-accent">
-          <div class="acc-num">A+</div>
-          <div class="acc-label">Atención Integral</div>
-        </div>
+      <div class="about-vis rvl">
+        <div class="about-frame"><span class="about-frame-icon">🩺</span></div>
+        <div class="about-tag"><div class="at-n">A+</div><div class="at-l">Atención Integral</div></div>
       </div>
-      <div class="about-content rvr">
-        <div class="label"><span>Quiénes somos</span></div>
-        <h2 class="stitle">Excelencia médica al<br><em>servicio de su salud</em></h2>
-        <p>El <strong>Dr. Libio Vera Vélez</strong> es Inmunólogo Clínico con formación internacional, especializado en el diagnóstico y tratamiento integral de enfermedades alérgicas, respiratorias y dermatológicas tanto en niños como en adultos.</p>
-        <p>Su enfoque integra la <strong>medicina de longevidad</strong> y la <strong>nutrición antialérgica</strong>, ofreciendo tratamientos personalizados que abordan la causa raíz de cada condición — no solo los síntomas.</p>
-        <p>Al frente del <strong>Centro de Alergia, Asma y Piel</strong>, combina tecnología de diagnóstico avanzada con atención humana y cercana, priorizando el bienestar integral de cada paciente.</p>
-        <div class="credentials">
-          <div class="cred"><span class="cred-ico">🎓</span><div class="cred-text"><strong>Inmunólogo Clínico Certificado</strong><span>Especialización en inmunología clínica y alergología</span></div></div>
-          <div class="cred"><span class="cred-ico">🏥</span><div class="cred-text"><strong>Centro de Alergia, Asma y Piel</strong><span>Director médico y especialista principal</span></div></div>
-          <div class="cred"><span class="cred-ico">🌱</span><div class="cred-text"><strong>Medicina de Longevidad</strong><span>Enfoque preventivo y nutrición antialérgica</span></div></div>
+      <div class="rvr">
+        <div class="eyebrow"><span>Sobre el Especialista</span></div>
+        <h2 class="h2" style="color:var(--navy);margin-bottom:20px">
+          Medicina que<br><em>transforma vidas</em>
+        </h2>
+        <p class="about-p">
+          El <strong>Dr. Libio Vera Vélez</strong> es médico Inmunólogo Clínico con vocación en la atención integral del paciente alérgico. Su trayectoria combina rigor científico con una mirada humanista: entiende que detrás de cada diagnóstico hay una persona que merece claridad, confianza y un plan terapéutico hecho a su medida.
+        </p>
+        <p class="about-p">
+          Con profundo conocimiento en <strong>alergología, inmunología, dermatología inmunológica</strong> y los más recientes avances en <strong>medicina de longevidad y nutrición antialérgica</strong>, el Dr. Vera Vélez ofrece un enfoque que va mucho más allá del síntoma — porque tratar la causa raíz es la única medicina que perdura.
+        </p>
+        <p class="about-p">
+          Atiende a <strong>niños y adultos</strong>, con especial dedicación a pacientes que han transitado por múltiples consultas sin encontrar respuestas. En el Centro de Alergia, Asma y Piel, cada caso comienza desde cero con ojos frescos y herramientas diagnósticas de alta precisión.
+        </p>
+        <div class="creds">
+          <div class="cred"><span class="cred-ico">🎓</span><div class="cred-t"><strong>Inmunólogo Clínico Certificado</strong><span>Formación especializada en inmunología y alergología clínica</span></div></div>
+          <div class="cred"><span class="cred-ico">🏥</span><div class="cred-t"><strong>Centro de Alergia, Asma y Piel</strong><span>Director médico y especialista principal — Guayaquil, Ecuador</span></div></div>
+          <div class="cred"><span class="cred-ico">🔬</span><div class="cred-t"><strong>Medicina de Precisión</strong><span>Diagnóstico avanzado y tratamientos individualizados</span></div></div>
+          <div class="cred"><span class="cred-ico">🌱</span><div class="cred-t"><strong>Longevidad y Nutrición</strong><span>Enfoque preventivo integral para optimizar la salud a largo plazo</span></div></div>
+        </div>
+        <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap">
+          <button class="btn btn-teal" onclick="openModal('modal-about')">Conocer más →</button>
+          <a href="https://wa.me/593980190654" target="_blank" rel="noopener" class="btn btn-outline-gold" style="color:var(--teal);border-color:var(--teal)">💬 Consultar</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-
-<!-- ════ SERVICES ════ -->
+<!-- ═══ SERVICES ═══ -->
 <section id="services" class="sp">
-  <div class="container">
-    <div class="srv-header rv">
-      <div class="label"><span>Nuestros Servicios</span></div>
-      <h2 class="stitle" style="color:#fff">Atención especializada<br><em>para cada necesidad</em></h2>
-      <p>Diagnóstico preciso y tratamientos personalizados para las condiciones alérgicas e inmunológicas más complejas.</p>
+  <div class="wrap">
+    <div class="srv-head rv">
+      <div class="eyebrow"><span>Especialidades Médicas</span></div>
+      <h2 class="h2" style="color:#fff">
+        Atención de excelencia<br>
+        <em>para cada condición</em>
+      </h2>
+      <p>Cada especialidad del Dr. Vera Vélez integra diagnóstico de precisión, evidencia científica actualizada y un plan terapéutico diseñado exclusivamente para usted.</p>
     </div>
+
     <div class="srv-grid">
-      <div class="srv-card rv d1"><span class="srv-n">01</span><span class="srv-ico">🤧</span><h3 class="srv-title">Alergias</h3><p class="srv-desc">Diagnóstico y manejo integral de rinitis, conjuntivitis, alergias alimentarias, medicamentosas y al veneno de insectos. Inmunoterapia personalizada.</p><div class="srv-tags"><span class="tag">Rinitis</span><span class="tag">Alimentaria</span><span class="tag">Medicamentosa</span></div></div>
-      <div class="srv-card rv d2"><span class="srv-n">02</span><span class="srv-ico">🫁</span><h3 class="srv-title">Asma</h3><p class="srv-desc">Tratamiento del asma bronquial en niños y adultos. Control de síntomas, planes de acción y manejo de crisis. Espirometría y pruebas de función pulmonar.</p><div class="srv-tags"><span class="tag">Bronquial</span><span class="tag">Pediátrico</span><span class="tag">Espirometría</span></div></div>
-      <div class="srv-card rv d3"><span class="srv-n">03</span><span class="srv-ico">🫶</span><h3 class="srv-title">Problemas de Piel</h3><p class="srv-desc">Diagnóstico y tratamiento de urticaria, angioedema, dermatitis atópica, eccema y otras condiciones dermatológicas de origen inmunológico.</p><div class="srv-tags"><span class="tag">Urticaria</span><span class="tag">Dermatitis</span><span class="tag">Eccema</span></div></div>
-      <div class="srv-card rv d4"><span class="srv-n">04</span><span class="srv-ico">🥗</span><h3 class="srv-title">Nutrición Antialérgica</h3><p class="srv-desc">Planes nutricionales diseñados para reducir la carga alérgica y fortalecer el sistema inmunológico a través de la alimentación.</p><div class="srv-tags"><span class="tag">Dieta</span><span class="tag">Inmunidad</span><span class="tag">Personalizado</span></div></div>
-      <div class="srv-card rv d5"><span class="srv-n">05</span><span class="srv-ico">⏳</span><h3 class="srv-title">Medicina de Longevidad</h3><p class="srv-desc">Enfoque preventivo e integrativo para optimizar la salud a largo plazo. Evaluación de marcadores de envejecimiento y bienestar celular.</p><div class="srv-tags"><span class="tag">Preventiva</span><span class="tag">Bienestar</span><span class="tag">Integrativa</span></div></div>
+      <!-- 1 Alergias -->
+      <div class="srv rv d1">
+        <span class="srv-n">01</span>
+        <span class="srv-ico">🤧</span>
+        <div class="srv-title">Alergias</div>
+        <p class="srv-text">Rinitis, conjuntivitis, alergia alimentaria, medicamentosa e insectos. Diagnóstico con pruebas cutáneas e inmunoterapia personalizada para reducir la sensibilidad del sistema inmune.</p>
+        <div class="srv-tags"><span class="stag">Rinitis</span><span class="stag">Alimentaria</span><span class="stag">Inmunoterapia</span></div>
+        <button class="srv-btn" onclick="openModal('modal-srv1')">Ver tratamiento →</button>
+      </div>
+      <!-- 2 Asma -->
+      <div class="srv rv d2">
+        <span class="srv-n">02</span>
+        <span class="srv-ico">🫁</span>
+        <div class="srv-title">Asma</div>
+        <p class="srv-text">Control integral del asma bronquial en niños y adultos. Evaluación de función pulmonar, identificación de desencadenantes y planes personalizados para una vida sin limitaciones.</p>
+        <div class="srv-tags"><span class="stag">Bronquial</span><span class="stag">Pediátrico</span><span class="stag">Espirometría</span></div>
+        <button class="srv-btn" onclick="openModal('modal-srv2')">Ver tratamiento →</button>
+      </div>
+      <!-- 3 Piel -->
+      <div class="srv rv d3">
+        <span class="srv-n">03</span>
+        <span class="srv-ico">✋</span>
+        <div class="srv-title">Problemas de Piel</div>
+        <p class="srv-text">Urticaria crónica, angioedema, dermatitis atópica y eczema abordados desde su raíz inmunológica. Tratamientos que van más allá del alivio temporal para lograr remisión duradera.</p>
+        <div class="srv-tags"><span class="stag">Urticaria</span><span class="stag">Dermatitis</span><span class="stag">Eczema</span></div>
+        <button class="srv-btn" onclick="openModal('modal-srv3')">Ver tratamiento →</button>
+      </div>
+      <!-- 4 Nutrición -->
+      <div class="srv rv d4">
+        <span class="srv-n">04</span>
+        <span class="srv-ico">🥗</span>
+        <div class="srv-title">Nutrición Antialérgica</div>
+        <p class="srv-text">El intestino es el primer sistema inmune del cuerpo. Planes nutricionales diseñados clínicamente para reducir la inflamación sistémica, fortalecer la barrera intestinal y disminuir la carga alérgica.</p>
+        <div class="srv-tags"><span class="stag">Microbioma</span><span class="stag">Inflamación</span><span class="stag">Personalizado</span></div>
+        <button class="srv-btn" onclick="openModal('modal-srv4')">Ver tratamiento →</button>
+      </div>
+      <!-- 5 Longevidad -->
+      <div class="srv rv d5">
+        <span class="srv-n">05</span>
+        <span class="srv-ico">⏳</span>
+        <div class="srv-title">Medicina de Longevidad</div>
+        <p class="srv-text">Evaluación integral de marcadores de envejecimiento celular, inflamación crónica y optimización hormonal. Un enfoque preventivo para vivir más años con plena vitalidad y bienestar.</p>
+        <div class="srv-tags"><span class="stag">Preventiva</span><span class="stag">Celular</span><span class="stag">Bienestar</span></div>
+        <button class="srv-btn" onclick="openModal('modal-srv5')">Ver tratamiento →</button>
+      </div>
+      <!-- CTA card -->
+      <div class="srv rv d5" style="background:rgba(201,168,76,.07);border-color:rgba(201,168,76,.2);display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:16px">
+        <span style="font-size:2.5rem">💬</span>
+        <div>
+          <div class="srv-title" style="margin-bottom:8px">¿No sabes por dónde empezar?</div>
+          <p class="srv-text" style="color:rgba(255,255,255,.55)">Cuéntanos tus síntomas. El Dr. Vera Vélez evaluará tu caso y te orientará hacia el camino correcto.</p>
+        </div>
+        <a href="https://wa.me/593980190654" target="_blank" rel="noopener" class="btn btn-gold" style="margin-top:6px">Consultar ahora</a>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- ═══ WHY US ═══ -->
+<section id="why" class="sp">
+  <div class="wrap">
+    <div class="why-head rv">
+      <div class="eyebrow" style="justify-content:center"><span>Por qué elegirnos</span></div>
+      <h2 class="h2" style="color:var(--navy)">La diferencia está en<br><em>cómo tratamos</em></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card rv d1">
+        <span class="why-ico">🔬</span>
+        <div class="why-title">Diagnóstico de Precisión</div>
+        <p class="why-text">Utilizamos pruebas diagnósticas especializadas para identificar con exactitud la causa de cada condición, sin suposiciones ni tratamientos genéricos.</p>
+      </div>
+      <div class="why-card rv d2">
+        <span class="why-ico">👶</span>
+        <div class="why-title">Niños y Adultos</div>
+        <p class="why-text">Experiencia y sensibilidad para atender todas las etapas de la vida. Protocolos adaptados a cada grupo etario con el mismo nivel de excelencia.</p>
+      </div>
+      <div class="why-card rv d3">
+        <span class="why-ico">🧬</span>
+        <div class="why-title">Enfoque Integrativo</div>
+        <p class="why-text">Integramos inmunología, nutrición clínica y medicina de longevidad en un solo plan terapéutico. Tratamos el sistema, no solo el síntoma.</p>
+      </div>
+      <div class="why-card rv d4">
+        <span class="why-ico">🤝</span>
+        <div class="why-title">Seguimiento Continuo</div>
+        <p class="why-text">La relación médico-paciente no termina en la consulta. Hacemos seguimiento activo de cada tratamiento para ajustarlo según su respuesta individual.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<!-- ════ EDUCATION ════ -->
+<!-- ═══ EDUCATION ═══ -->
 <section id="education" class="sp">
-  <div class="container">
-    <div class="edu-header rv">
-      <div class="label"><span>Para Pacientes</span></div>
-      <h2 class="stitle">Aprende sobre<br><em>tu salud inmunológica</em></h2>
-      <p>Recursos educativos del Dr. Vera Vélez para pacientes y familiares. El conocimiento es el primer paso hacia el bienestar.</p>
+  <div class="wrap">
+    <div class="edu-head rv">
+      <div class="eyebrow"><span>Información para Pacientes</span></div>
+      <h2 class="h2">Comprende tu<br><em>salud inmunológica</em></h2>
+      <p>El Dr. Vera Vélez cree firmemente que un paciente informado es un paciente empoderado. Aquí encontrarás respuestas claras a las preguntas más frecuentes.</p>
     </div>
     <div class="art-grid">
-      <div class="art-card rv d1"><div class="art-img bg1">🌿</div><div class="art-body"><p class="art-cat">Alergias · Nutrición</p><h3 class="art-title">¿Qué alimentos evitar si tienes rinitis alérgica?</h3><p class="art-exc">La relación entre la dieta y las alergias respiratorias es más estrecha de lo que imaginas. Descubre qué alimentos inflaman tu sistema y cuáles lo fortalecen.</p></div></div>
-      <div class="art-card rv d2"><div class="art-img bg2">🌬️</div><div class="art-body"><p class="art-cat">Asma · Prevención</p><h3 class="art-title">Señales de alerta del asma en niños que no debes ignorar</h3><p class="art-exc">Identificar los síntomas tempranos del asma infantil puede marcar una diferencia enorme en la calidad de vida del niño. Guía práctica para padres.</p></div></div>
-      <div class="art-card rv d3"><div class="art-img bg3">✨</div><div class="art-body"><p class="art-cat">Piel · Cuidados</p><h3 class="art-title">Dermatitis atópica: más que un problema de piel</h3><p class="art-exc">La dermatitis atópica tiene raíces inmunológicas profundas. Entender su mecanismo es clave para un tratamiento efectivo y duradero.</p></div></div>
+      <div class="art rv d1">
+        <div class="art-img ai1">🌿</div>
+        <div class="art-body">
+          <p class="art-cat">Alergias · Nutrición</p>
+          <h3 class="art-title">¿Por qué la dieta influye en tus alergias?</h3>
+          <p class="art-text">Existe una conexión directa entre lo que comemos y la intensidad de las reacciones alérgicas. Descubre cómo ciertos alimentos pueden activar o calmar tu sistema inmune.</p>
+          <button class="art-more" onclick="openModal('modal-art1')">Leer más →</button>
+        </div>
+      </div>
+      <div class="art rv d2">
+        <div class="art-img ai2">🫁</div>
+        <div class="art-body">
+          <p class="art-cat">Asma · Prevención</p>
+          <h3 class="art-title">Señales de asma en niños que los padres deben conocer</h3>
+          <p class="art-text">El asma infantil puede manifestarse de formas inesperadas. Identificarla a tiempo hace una diferencia enorme en el desarrollo y bienestar del niño.</p>
+          <button class="art-more" onclick="openModal('modal-art2')">Leer más →</button>
+        </div>
+      </div>
+      <div class="art rv d3">
+        <div class="art-img ai3">🌙</div>
+        <div class="art-body">
+          <p class="art-cat">Piel · Inmunología</p>
+          <h3 class="art-title">Dermatitis atópica: la piel como ventana al sistema inmune</h3>
+          <p class="art-text">La piel es el espejo del sistema inmunológico. Comprender la dermatitis atópica desde adentro hacia afuera transforma el enfoque del tratamiento.</p>
+          <button class="art-more" onclick="openModal('modal-art3')">Leer más →</button>
+        </div>
+      </div>
+      <div class="art rv d4">
+        <div class="art-img ai4">🧬</div>
+        <div class="art-body">
+          <p class="art-cat">Inmunoterapia</p>
+          <h3 class="art-title">Inmunoterapia: el único tratamiento que cambia la historia natural</h3>
+          <p class="art-text">A diferencia de los antihistamínicos, la inmunoterapia no solo controla los síntomas — reeducas al sistema inmune para que deje de reaccionar en exceso.</p>
+          <button class="art-more" onclick="openModal('modal-art4')">Leer más →</button>
+        </div>
+      </div>
+      <div class="art rv d5">
+        <div class="art-img ai5">⏳</div>
+        <div class="art-body">
+          <p class="art-cat">Longevidad · Bienestar</p>
+          <h3 class="art-title">Envejecer bien: lo que la medicina de longevidad puede hacer por ti</h3>
+          <p class="art-text">La medicina de longevidad no busca vivir más años, sino años con mayor vitalidad, claridad mental y bienestar. Te explicamos en qué consiste este enfoque.</p>
+          <button class="art-more" onclick="openModal('modal-art5')">Leer más →</button>
+        </div>
+      </div>
+      <!-- CTA tile -->
+      <div class="art rv d5" style="background:linear-gradient(145deg,var(--navy),var(--navy3));display:flex;flex-direction:column;justify-content:center;align-items:center;gap:16px;padding:32px 24px;text-align:center">
+        <span style="font-size:3rem">📋</span>
+        <div>
+          <p style="font-family:var(--serif);font-size:1.3rem;color:#fff;font-weight:300;margin-bottom:8px">¿Tienes síntomas y no sabes cuál es el especialista correcto?</p>
+          <p style="font-size:.85rem;color:rgba(255,255,255,.5);font-weight:300">Cuéntanos y te orientamos</p>
+        </div>
+        <a href="https://wa.me/593980190654" target="_blank" rel="noopener" class="btn btn-gold">💬 Consultar gratis</a>
+      </div>
     </div>
   </div>
 </section>
 
-
-<!-- ════ INSTAGRAM ════ -->
+<!-- ═══ INSTAGRAM ═══ -->
 <section id="instagram" class="sp">
-  <div class="container">
-    <div class="ig-header rv">
-      <h2 class="ig-title">Síguenos en <span>Instagram</span></h2>
-      <a href="https://www.instagram.com/v.g_allergy/" target="_blank" rel="noopener" class="btn-ig">📷 @v.g_allergy</a>
+  <div class="wrap">
+    <div class="ig-head rv">
+      <h2 class="ig-title">Síguenos en <em>Instagram</em></h2>
+      <a href="https://www.instagram.com/v.g_allergy/" target="_blank" rel="noopener" class="btn btn-outline-gold">📷 @v.g_allergy</a>
     </div>
-    <div class="posts-grid rv">
-      <div class="post-tile pt1">🤧<div class="po">📷</div></div>
-      <div class="post-tile pt2">🌱<div class="po">📷</div></div>
-      <div class="post-tile pt3">🩺<div class="po">📷</div></div>
-      <div class="post-tile pt4">💊<div class="po">📷</div></div>
+    <div class="posts rv">
+      <div class="post pc1">🤧<div class="pov">📷</div></div>
+      <div class="post pc2">🌱<div class="pov">📷</div></div>
+      <div class="post pc3">🩺<div class="pov">📷</div></div>
+      <div class="post pc4">💊<div class="pov">📷</div></div>
+    </div>
+    <div class="ig-cta rv">
+      <p>Contenido educativo, casos clínicos y consejos para tu salud cada semana</p>
+      <a href="https://www.instagram.com/v.g_allergy/" target="_blank" rel="noopener" class="btn btn-teal">Ver perfil de Instagram →</a>
     </div>
   </div>
 </section>
 
-
-<!-- ════ CONTACT ════ -->
+<!-- ═══ CONTACT ═══ -->
 <section id="contact" class="sp">
-  <div class="container">
+  <div class="wrap">
     <div class="ct-grid">
       <div class="ct-left rvl">
-        <div class="label"><span>Contacto</span></div>
-        <h2 class="stitle">Estamos listos<br>para <em>atenderte</em></h2>
-        <p>Agenda tu consulta directamente por WhatsApp o déjanos tus datos. El equipo del Dr. Vera Vélez te responderá a la brevedad.</p>
+        <div class="eyebrow"><span>Contacto</span></div>
+        <h2 class="h2" style="color:var(--navy)">Estamos listos<br>para <em>atenderte</em></h2>
+        <p>Agenda tu consulta directamente por WhatsApp o déjanos tus datos. Respondemos en menos de 24 horas con orientación personalizada antes de tu primera cita.</p>
         <div class="ct-cards">
-          <a href="https://wa.me/593980190654" target="_blank" rel="noopener" class="ct-card"><div class="ct-ico ic1">📱</div><div class="ct-txt"><strong>WhatsApp Principal</strong><span>0980 190 654 · Consultas generales</span></div><span class="ct-arr">→</span></a>
-          <a href="https://wa.me/593993902554" target="_blank" rel="noopener" class="ct-card"><div class="ct-ico ic2">🏥</div><div class="ct-txt"><strong>Omnihospital</strong><span>0993 902 554 · Citas en clínica</span></div><span class="ct-arr">→</span></a>
-          <a href="https://www.instagram.com/v.g_allergy/" target="_blank" rel="noopener" class="ct-card"><div class="ct-ico ic3">📷</div><div class="ct-txt"><strong>Instagram</strong><span>@v.g_allergy · Contenido educativo</span></div><span class="ct-arr">→</span></a>
+          <a href="https://wa.me/593980190654" target="_blank" rel="noopener" class="ct-card">
+            <div class="ct-ico ci1">📱</div>
+            <div class="ct-txt"><strong>WhatsApp Principal</strong><span>0980 190 654 · Citas y consultas generales</span></div>
+            <span class="ct-arr">→</span>
+          </a>
+          <a href="https://wa.me/593993902554" target="_blank" rel="noopener" class="ct-card">
+            <div class="ct-ico ci2">🏥</div>
+            <div class="ct-txt"><strong>Omnihospital</strong><span>0993 902 554 · Citas institucionales</span></div>
+            <span class="ct-arr">→</span>
+          </a>
+          <a href="https://www.instagram.com/v.g_allergy/" target="_blank" rel="noopener" class="ct-card">
+            <div class="ct-ico ci3">📷</div>
+            <div class="ct-txt"><strong>Instagram</strong><span>@v.g_allergy · Mensajes directos</span></div>
+            <span class="ct-arr">→</span>
+          </a>
         </div>
       </div>
 
-      <div class="form-panel rvr">
+      <div class="form-box rvr">
         <h3 class="form-title">Solicitar Consulta</h3>
-        <p class="form-sub">Te contactaremos en menos de 24 horas</p>
+        <p class="form-sub">Completa el formulario · Te contactamos en menos de 24 h</p>
         <form id="cForm" onsubmit="doForm(event)" novalidate>
           <div class="fr">
-            <div class="fg"><label for="fn">Nombre</label><input id="fn" type="text" class="fc" placeholder="Tu nombre completo" required /></div>
+            <div class="fg"><label for="fn">Nombre completo</label><input id="fn" type="text" class="fc" placeholder="Tu nombre" required /></div>
             <div class="fg"><label for="fa">Edad</label><input id="fa" type="text" class="fc" placeholder="Ej: 32 años" /></div>
           </div>
           <div class="fg"><label for="fp">Teléfono / WhatsApp</label><input id="fp" type="tel" class="fc" placeholder="+593 9XX XXX XXX" required /></div>
@@ -550,36 +724,38 @@
               <option>No sé / Consulta general</option>
             </select>
           </div>
-          <div class="fg"><label for="fmsg">Cuéntanos brevemente</label><textarea id="fmsg" class="fc" placeholder="Describe brevemente tus síntomas o motivo de consulta…"></textarea></div>
-          <button type="submit" class="btn-sub">📲 Enviar por WhatsApp</button>
+          <div class="fg"><label for="fmsg">Cuéntanos brevemente</label><textarea id="fmsg" class="fc" placeholder="Describe tus síntomas o motivo de consulta…"></textarea></div>
+          <button type="submit" class="btn btn-wa" style="width:100%;justify-content:center;min-height:54px;font-size:.9rem">📲 Enviar por WhatsApp</button>
         </form>
       </div>
     </div>
   </div>
 </section>
 
-
-<!-- ════ FOOTER ════ -->
+<!-- ═══ FOOTER ═══ -->
 <footer>
-  <div class="container">
+  <div class="wrap">
     <div class="ft-grid">
       <div class="ft-brand">
-        <a href="#hero" class="ft-logo"><div class="ft-logo-ico">🩺</div><span class="ft-logo-txt">Dr. <span>Vera</span> Vélez</span></a>
-        <p>Centro de Alergia, Asma y Piel · Inmunología Clínica especializada para niños y adultos en Ecuador.</p>
+        <div class="ft-logo">
+          <div class="ft-logo-c">🩺</div>
+          <span class="ft-logo-t">Dr. <b>Vera Vélez</b></span>
+        </div>
+        <p>Centro de Alergia, Asma y Piel · Inmunología Clínica especializada para niños y adultos · Guayaquil, Ecuador</p>
       </div>
       <div>
-        <p class="ft-h">Navegación</p>
-        <ul class="ft-links">
-          <li><a href="#hero">Inicio</a></li>
-          <li><a href="#about">Quiénes Somos</a></li>
-          <li><a href="#services">Servicios</a></li>
-          <li><a href="#education">Educación</a></li>
-          <li><a href="#contact">Contacto</a></li>
+        <p class="ft-h">Especialidades</p>
+        <ul class="ft-ul">
+          <li><a href="#services">Alergias</a></li>
+          <li><a href="#services">Asma</a></li>
+          <li><a href="#services">Problemas de Piel</a></li>
+          <li><a href="#services">Nutrición Antialérgica</a></li>
+          <li><a href="#services">Medicina de Longevidad</a></li>
         </ul>
       </div>
       <div>
-        <p class="ft-h">Contacto Directo</p>
-        <ul class="ft-links">
+        <p class="ft-h">Contacto</p>
+        <ul class="ft-ul">
           <li><a href="https://wa.me/593980190654" target="_blank" rel="noopener">📱 0980 190 654</a></li>
           <li><a href="https://wa.me/593993902554" target="_blank" rel="noopener">🏥 0993 902 554</a></li>
           <li><a href="https://www.instagram.com/v.g_allergy/" target="_blank" rel="noopener">📷 @v.g_allergy</a></li>
@@ -587,53 +763,410 @@
       </div>
     </div>
     <div class="ft-bot">
-      <p>© 2025 Dr. Libio Vera Vélez · Centro de Alergia, Asma y Piel</p>
+      <p>© 2025 Dr. Libio Vera Vélez · Centro de Alergia, Asma y Piel · Todos los derechos reservados</p>
       <p>Diseñado con ❤️ en Ecuador</p>
     </div>
   </div>
 </footer>
 
-<!-- WhatsApp flotante -->
-<a href="https://wa.me/593980190654" target="_blank" rel="noopener" class="wa-float" aria-label="Contactar por WhatsApp">💬</a>
+<!-- Botón flotante WhatsApp -->
+<a href="https://wa.me/593980190654" target="_blank" rel="noopener" class="wa-float" aria-label="WhatsApp">💬</a>
 
+<!-- ═══════════════════════════════════
+     MODALES
+═══════════════════════════════════ -->
+
+<!-- Modal: Sobre el Doctor -->
+<div class="modal-overlay" id="modal-about" role="dialog" aria-modal="true" aria-labelledby="ma-title">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-about')" aria-label="Cerrar">✕</button>
+    <div class="modal-header">
+      <div class="modal-header-badge">🩺 Inmunólogo Clínico</div>
+      <h2 class="modal-title" id="ma-title">Dr. Libio <em>Vera Vélez</em></h2>
+      <p class="modal-subtitle">Especialista en Alergias, Asma, Piel y Medicina de Longevidad</p>
+    </div>
+    <div class="modal-body">
+      <p>El <strong>Dr. Libio Vera Vélez</strong> es médico especialista en Inmunología Clínica y Alergología, con una trayectoria dedicada al diagnóstico y tratamiento integral de las enfermedades del sistema inmune. Su ejercicio clínico combina el rigor científico de la medicina de evidencia con una sensibilidad profunda hacia la experiencia del paciente.</p>
+      <p>Formado con una perspectiva integrativa, el Dr. Vera Vélez incorpora en su práctica los avances más recientes en <strong>nutrición clínica antialérgica</strong>, <strong>microbioma intestinal</strong> y <strong>medicina de longevidad</strong>, áreas que han transformado la manera de entender y tratar las enfermedades alérgicas crónicas.</p>
+      <div class="modal-divider"></div>
+      <p><strong>Áreas de especialidad:</strong></p>
+      <ul class="modal-list">
+        <li>Diagnóstico y tratamiento de alergias alimentarias, respiratorias y de contacto</li>
+        <li>Manejo integral del asma bronquial en niños y adultos</li>
+        <li>Urticaria crónica, angioedema y dermatitis atópica de origen inmunológico</li>
+        <li>Inmunoterapia personalizada (subcutánea y sublingual)</li>
+        <li>Planes nutricionales antiinflamatorios y antialérgicos</li>
+        <li>Evaluación de marcadores de longevidad y bienestar celular</li>
+      </ul>
+      <div class="modal-divider"></div>
+      <p>Atiende a <strong>niños y adultos</strong> con el mismo nivel de excelencia clínica, adaptando su enfoque y comunicación a cada etapa de la vida. En el Centro de Alergia, Asma y Piel, cada paciente es recibido con tiempo, escucha activa y una evaluación profunda que marca la diferencia.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="https://wa.me/593980190654" target="_blank" rel="noopener" class="btn btn-wa">💬 Agendar consulta</a>
+      <button class="btn btn-outline-gold" style="color:var(--teal);border-color:var(--teal)" onclick="closeModal('modal-about')">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: Alergias -->
+<div class="modal-overlay" id="modal-srv1" role="dialog" aria-modal="true">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-srv1')">✕</button>
+    <div class="modal-header">
+      <div class="modal-header-badge">🤧 Especialidad 01</div>
+      <h2 class="modal-title">Alergias e <em>Inmunología</em></h2>
+      <p class="modal-subtitle">Diagnóstico preciso · Inmunoterapia personalizada · Resultados duraderos</p>
+    </div>
+    <div class="modal-body">
+      <p>Las alergias son una respuesta exagerada del sistema inmune ante sustancias que, en condiciones normales, son inofensivas. Su impacto puede ir desde molestias menores hasta condiciones que comprometen significativamente la calidad de vida.</p>
+      <p>En el Centro de Alergia, Asma y Piel, el Dr. Vera Vélez realiza una <strong>evaluación diagnóstica completa</strong> que incluye historia clínica detallada, pruebas cutáneas (prick test), análisis de IgE específicas y, en casos seleccionados, pruebas de provocación controlada.</p>
+      <div class="modal-divider"></div>
+      <p><strong>Condiciones que tratamos:</strong></p>
+      <ul class="modal-list">
+        <li>Rinitis alérgica estacional y perenne</li>
+        <li>Conjuntivitis alérgica</li>
+        <li>Alergia alimentaria en niños y adultos</li>
+        <li>Alergia a medicamentos (penicilina, AINEs, contrastes)</li>
+        <li>Alergia al veneno de insectos (abejas, avispas)</li>
+        <li>Anafilaxia y reacciones sistémicas graves</li>
+      </ul>
+      <div class="modal-divider"></div>
+      <p><strong>Inmunoterapia:</strong> El único tratamiento que modifica la enfermedad de base. Mediante la administración gradual del alérgeno, reeducamos al sistema inmune para que deje de reaccionar en exceso. Disponible en modalidad subcutánea (inyecciones) y sublingual (gotas).</p>
+    </div>
+    <div class="modal-footer">
+      <a href="https://wa.me/593980190654" target="_blank" rel="noopener" class="btn btn-wa">💬 Consultar este servicio</a>
+      <button class="btn btn-outline-gold" style="color:var(--teal);border-color:var(--teal)" onclick="closeModal('modal-srv1')">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: Asma -->
+<div class="modal-overlay" id="modal-srv2" role="dialog" aria-modal="true">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-srv2')">✕</button>
+    <div class="modal-header">
+      <div class="modal-header-badge">🫁 Especialidad 02</div>
+      <h2 class="modal-title">Asma <em>Bronquial</em></h2>
+      <p class="modal-subtitle">Control integral · Espirometría · Vida sin limitaciones</p>
+    </div>
+    <div class="modal-body">
+      <p>El asma es una enfermedad inflamatoria crónica de las vías respiratorias que, cuando no está bien controlada, puede limitar significativamente la actividad física, el sueño y la calidad de vida en general.</p>
+      <p>Con el manejo adecuado, <strong>la gran mayoría de pacientes asmáticos pueden llevar una vida completamente normal</strong>. El objetivo del Dr. Vera Vélez no es solo controlar las crisis: es alcanzar el control total de la enfermedad con la menor cantidad de medicación posible.</p>
+      <div class="modal-divider"></div>
+      <p><strong>Nuestra evaluación incluye:</strong></p>
+      <ul class="modal-list">
+        <li>Espirometría y pruebas de función pulmonar</li>
+        <li>Identificación de desencadenantes (alérgenos, ejercicio, frío, infecciones)</li>
+        <li>Evaluación de comorbilidades (rinitis, reflujo, apnea del sueño)</li>
+        <li>Plan de acción personalizado para el paciente y su familia</li>
+        <li>Educación sobre el uso correcto de inhaladores</li>
+      </ul>
+      <div class="modal-divider"></div>
+      <p><strong>Asma en niños:</strong> El diagnóstico temprano y el tratamiento adecuado en la infancia pueden prevenir que el asma se vuelva una condición crónica en la adultez. Contamos con protocolos específicos para cada grupo de edad.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="https://wa.me/593980190654" target="_blank" rel="noopener" class="btn btn-wa">💬 Consultar este servicio</a>
+      <button class="btn btn-outline-gold" style="color:var(--teal);border-color:var(--teal)" onclick="closeModal('modal-srv2')">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: Piel -->
+<div class="modal-overlay" id="modal-srv3" role="dialog" aria-modal="true">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-srv3')">✕</button>
+    <div class="modal-header">
+      <div class="modal-header-badge">✋ Especialidad 03</div>
+      <h2 class="modal-title">Problemas de <em>Piel</em></h2>
+      <p class="modal-subtitle">Urticaria · Dermatitis · Eczema · Origen inmunológico</p>
+    </div>
+    <div class="modal-body">
+      <p>La piel es la frontera entre nuestro organismo y el mundo exterior, y también es un espejo fiel del sistema inmune. Muchas condiciones dermatológicas tienen un origen inmunológico que, cuando se aborda correctamente, permite lograr mejorías significativas y duraderas.</p>
+      <p>El Dr. Vera Vélez aborda estas condiciones <strong>desde su raíz inmunológica</strong>, identificando los mecanismos subyacentes que mantienen activa la inflamación cutánea, en lugar de limitarse al manejo sintomático superficial.</p>
+      <div class="modal-divider"></div>
+      <p><strong>Condiciones que tratamos:</strong></p>
+      <ul class="modal-list">
+        <li>Urticaria crónica espontánea e inducible</li>
+        <li>Angioedema recurrente (con y sin urticaria)</li>
+        <li>Dermatitis atópica en niños y adultos</li>
+        <li>Eczema de contacto alérgico</li>
+        <li>Prurito crónico de origen inmunológico</li>
+        <li>Mastocitosis cutánea</li>
+      </ul>
+      <div class="modal-divider"></div>
+      <p><strong>Enfoque terapéutico:</strong> Combinamos tratamiento farmacológico actualizado con modificaciones del estilo de vida, nutrición antiinflamatoria y, en casos seleccionados, inmunoterapia biológica para lograr remisión completa.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="https://wa.me/593980190654" target="_blank" rel="noopener" class="btn btn-wa">💬 Consultar este servicio</a>
+      <button class="btn btn-outline-gold" style="color:var(--teal);border-color:var(--teal)" onclick="closeModal('modal-srv3')">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: Nutrición Antialérgica -->
+<div class="modal-overlay" id="modal-srv4" role="dialog" aria-modal="true">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-srv4')">✕</button>
+    <div class="modal-header">
+      <div class="modal-header-badge">🥗 Especialidad 04</div>
+      <h2 class="modal-title">Nutrición <em>Antialérgica</em></h2>
+      <p class="modal-subtitle">Microbioma · Inflamación · Bienestar digestivo</p>
+    </div>
+    <div class="modal-body">
+      <p>El intestino no es solo un órgano digestivo: es el hogar del <strong>70% del sistema inmune</strong>. La relación entre lo que comemos, nuestra microbiota intestinal y la intensidad de las respuestas alérgicas es hoy una de las áreas más activas de la investigación inmunológica.</p>
+      <p>El Dr. Vera Vélez integra la nutrición clínica antialérgica como parte fundamental del tratamiento, ofreciendo planes personalizados que van más allá de las simples restricciones alimentarias.</p>
+      <div class="modal-divider"></div>
+      <p><strong>Nuestro enfoque nutricional incluye:</strong></p>
+      <ul class="modal-list">
+        <li>Evaluación de alergias e intolerancias alimentarias</li>
+        <li>Plan nutricional antiinflamatorio personalizado</li>
+        <li>Estrategias para fortalecer la barrera intestinal</li>
+        <li>Optimización del microbioma con prebióticos y probióticos específicos</li>
+        <li>Identificación de alimentos que amplifican la respuesta alérgica</li>
+        <li>Nutrición adaptada por edad (bebés, niños, adultos, adultos mayores)</li>
+      </ul>
+      <div class="modal-divider"></div>
+      <p>Los cambios en la dieta, aplicados con criterio clínico, pueden <strong>reducir significativamente la carga alérgica</strong> y mejorar la respuesta a los tratamientos farmacológicos convencionales.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="https://wa.me/593980190654" target="_blank" rel="noopener" class="btn btn-wa">💬 Consultar este servicio</a>
+      <button class="btn btn-outline-gold" style="color:var(--teal);border-color:var(--teal)" onclick="closeModal('modal-srv4')">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: Longevidad -->
+<div class="modal-overlay" id="modal-srv5" role="dialog" aria-modal="true">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-srv5')">✕</button>
+    <div class="modal-header">
+      <div class="modal-header-badge">⏳ Especialidad 05</div>
+      <h2 class="modal-title">Medicina de <em>Longevidad</em></h2>
+      <p class="modal-subtitle">Prevención · Vitalidad · Bienestar celular</p>
+    </div>
+    <div class="modal-body">
+      <p>La medicina de longevidad no se trata de vivir más años — se trata de vivir mejor. Es la disciplina médica que estudia los mecanismos del envejecimiento celular para <strong>intervenir antes de que aparezca la enfermedad</strong>, preservando la vitalidad, la función cognitiva y el bienestar integral.</p>
+      <p>El Dr. Vera Vélez incorpora este enfoque en su práctica clínica, ofreciendo evaluaciones preventivas que permiten detectar y corregir desequilibrios sistémicos antes de que se conviertan en patologías establecidas.</p>
+      <div class="modal-divider"></div>
+      <p><strong>Evaluación de longevidad incluye:</strong></p>
+      <ul class="modal-list">
+        <li>Análisis de marcadores de inflamación crónica de bajo grado</li>
+        <li>Evaluación del estado antioxidante y estrés oxidativo</li>
+        <li>Perfil hormonal e inmunológico completo</li>
+        <li>Análisis de composición corporal y metabolismo</li>
+        <li>Plan nutricional y de suplementación personalizado</li>
+        <li>Estrategias de estilo de vida basadas en evidencia científica</li>
+      </ul>
+      <div class="modal-divider"></div>
+      <p>Este servicio es especialmente valioso para personas que desean <strong>optimizar proactivamente su salud</strong> o que experimentan síntomas difusos (fatiga, niebla mental, envejecimiento acelerado) sin una causa médica aparente.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="https://wa.me/593980190654" target="_blank" rel="noopener" class="btn btn-wa">💬 Consultar este servicio</a>
+      <button class="btn btn-outline-gold" style="color:var(--teal);border-color:var(--teal)" onclick="closeModal('modal-srv5')">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: Art 1 – Dieta y alergias -->
+<div class="modal-overlay" id="modal-art1" role="dialog" aria-modal="true">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-art1')">✕</button>
+    <div class="modal-header">
+      <div class="modal-header-badge">🌿 Alergias · Nutrición</div>
+      <h2 class="modal-title">¿Por qué la dieta influye en <em>tus alergias</em>?</h2>
+    </div>
+    <div class="modal-body">
+      <p>La conexión entre alimentación y alergias es mucho más profunda de lo que imaginamos. El sistema digestivo alberga cerca del 70% de las células inmunes del cuerpo, lo que convierte al intestino en el gran regulador de cómo respondemos a los alérgenos.</p>
+      <p><strong>¿Cómo afecta la dieta al sistema alérgico?</strong> Ciertos alimentos tienen propiedades proinflamatorias que pueden amplificar las reacciones alérgicas existentes, incluso sin ser alérgenos por sí mismos. El azúcar refinada, los ultraprocesados y algunos aditivos alimentarios son los principales sospechosos.</p>
+      <div class="modal-divider"></div>
+      <p><strong>Alimentos que pueden agravar las alergias:</strong></p>
+      <ul class="modal-list">
+        <li>Histamina libre: vino tinto, quesos curados, embutidos, atún en conserva</li>
+        <li>Alimentos que liberan histamina: fresas, tomate, espinacas, chocolate</li>
+        <li>Azúcares refinados y ultraprocesados que fomentan la inflamación sistémica</li>
+        <li>Aditivos artificiales (tartrazina, benzoatos, sulfitos)</li>
+      </ul>
+      <div class="modal-divider"></div>
+      <p><strong>Alimentos antiinflamatorios aliados:</strong> Omega-3 (salmón, sardinas, nueces), cúrcuma, jengibre, probióticos naturales (kéfir, yogur sin azúcar) y una dieta rica en fibra vegetal son fundamentales para fortalecer la tolerancia inmune.</p>
+      <p>La <strong>nutrición antialérgica personalizada</strong> no es una dieta restrictiva — es una estrategia clínica para modular el sistema inmune desde adentro. Consulta con el Dr. Vera Vélez para un plan adaptado a tu caso específico.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="https://wa.me/593980190654" target="_blank" rel="noopener" class="btn btn-wa">💬 Quiero un plan nutricional</a>
+      <button class="btn btn-outline-gold" style="color:var(--teal);border-color:var(--teal)" onclick="closeModal('modal-art1')">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: Art 2 – Asma en niños -->
+<div class="modal-overlay" id="modal-art2" role="dialog" aria-modal="true">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-art2')">✕</button>
+    <div class="modal-header">
+      <div class="modal-header-badge">🫁 Asma · Prevención</div>
+      <h2 class="modal-title">Señales de asma en niños que los padres deben <em>conocer</em></h2>
+    </div>
+    <div class="modal-body">
+      <p>El asma es la enfermedad crónica más frecuente en la infancia, pero muchos casos permanecen sin diagnosticar durante años porque sus señales no siempre son obvias. Reconocer los síntomas a tiempo puede cambiar completamente el curso de la enfermedad.</p>
+      <p><strong>Señales de alerta que merecen evaluación médica:</strong></p>
+      <ul class="modal-list">
+        <li>Tos frecuente, especialmente de noche o al amanecer</li>
+        <li>Tos al hacer ejercicio o cuando el niño corre y juega intensamente</li>
+        <li>Silbidos o "pitos" al respirar (sibilancias) que se repiten</li>
+        <li>Sensación de opresión o "apretón" en el pecho</li>
+        <li>El niño se cansa más rápido que sus compañeros durante el juego</li>
+        <li>Resfriados que demoran más de lo normal en resolverse</li>
+        <li>Tos que empeora con el frío, el polvo o en lugares con animales</li>
+      </ul>
+      <div class="modal-divider"></div>
+      <p><strong>¿Qué hacer si reconoces estos síntomas?</strong> No esperes una crisis respiratoria para consultar. Una evaluación con espirometría y pruebas alérgicas puede confirmar o descartar el diagnóstico y establecer un plan de manejo que permita al niño llevar una vida completamente normal, incluyendo deportes y actividades físicas.</p>
+      <p>Con el tratamiento correcto, <strong>la mayoría de los niños con asma pueden vivir sin ninguna limitación</strong>. El diagnóstico temprano es la clave.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="https://wa.me/593980190654" target="_blank" rel="noopener" class="btn btn-wa">💬 Consultar sobre mi hijo/a</a>
+      <button class="btn btn-outline-gold" style="color:var(--teal);border-color:var(--teal)" onclick="closeModal('modal-art2')">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: Art 3 – Dermatitis -->
+<div class="modal-overlay" id="modal-art3" role="dialog" aria-modal="true">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-art3')">✕</button>
+    <div class="modal-header">
+      <div class="modal-header-badge">🌙 Piel · Inmunología</div>
+      <h2 class="modal-title">Dermatitis atópica: la piel como ventana al <em>sistema inmune</em></h2>
+    </div>
+    <div class="modal-body">
+      <p>La dermatitis atópica es mucho más que una enfermedad de piel. Es la manifestación cutánea de una desregulación inmunológica más profunda, relacionada con la misma vía que causa la rinitis alérgica y el asma bronquial — la llamada "marcha atópica".</p>
+      <p><strong>¿Qué sucede en la piel con dermatitis atópica?</strong> Existe una alteración en la barrera cutánea que permite la entrada de alérgenos e irritantes, desencadenando una respuesta inflamatoria exagerada. Esta inflamación genera el picor intenso, que a su vez provoca el rascado, que daña aún más la barrera — un ciclo que se retroalimenta.</p>
+      <div class="modal-divider"></div>
+      <p><strong>Por qué el enfoque inmunológico marca la diferencia:</strong></p>
+      <ul class="modal-list">
+        <li>Identifica los desencadenantes específicos de cada paciente (no todos son iguales)</li>
+        <li>Trata la inflamación sistémica, no solo la manifestación cutánea</li>
+        <li>Evalúa la relación con alergias alimentarias y ambientales concomitantes</li>
+        <li>Incorpora nutrición antiinflamatoria como parte del plan terapéutico</li>
+        <li>Contempla opciones terapéuticas avanzadas cuando los tratamientos convencionales fallan</li>
+      </ul>
+      <div class="modal-divider"></div>
+      <p>El objetivo no es solo calmar el brote — es <strong>lograr períodos de remisión prolongada</strong> y mejorar estructuralmente la calidad de vida del paciente y su familia.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="https://wa.me/593980190654" target="_blank" rel="noopener" class="btn btn-wa">💬 Quiero tratar mi dermatitis</a>
+      <button class="btn btn-outline-gold" style="color:var(--teal);border-color:var(--teal)" onclick="closeModal('modal-art3')">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: Art 4 – Inmunoterapia -->
+<div class="modal-overlay" id="modal-art4" role="dialog" aria-modal="true">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-art4')">✕</button>
+    <div class="modal-header">
+      <div class="modal-header-badge">🧬 Inmunoterapia</div>
+      <h2 class="modal-title">Inmunoterapia: el único tratamiento que cambia la <em>historia natural</em></h2>
+    </div>
+    <div class="modal-body">
+      <p>Los antihistamínicos y corticoides controlan los síntomas mientras se toman, pero no modifican la enfermedad de base. La <strong>inmunoterapia alérgena</strong> es el único tratamiento que actúa sobre el mecanismo fundamental de la alergia, con efectos que persisten años después de finalizado el tratamiento.</p>
+      <p><strong>¿Cómo funciona la inmunoterapia?</strong> Consiste en la administración progresiva y controlada del alérgeno causante de la alergia (polvo, pollen, ácaros, veneno de insecto, etc.), en dosis gradualmente crecientes. Esto entrena al sistema inmune para que deje de responder de forma exagerada ante ese estímulo.</p>
+      <div class="modal-divider"></div>
+      <p><strong>Modalidades disponibles:</strong></p>
+      <ul class="modal-list">
+        <li><strong>Subcutánea (inyecciones):</strong> Estándar de oro. Alta eficacia, requiere visitas periódicas al consultorio</li>
+        <li><strong>Sublingual (gotas o comprimidos):</strong> Administración en casa, muy conveniente para niños y personas con agendas exigentes</li>
+      </ul>
+      <div class="modal-divider"></div>
+      <p><strong>¿Para quién está indicada?</strong> Para pacientes con rinitis alérgica, asma alérgica, alergia al veneno de insectos y, en casos seleccionados, alergia alimentaria. El candidato ideal es alguien con síntomas persistentes a pesar del tratamiento farmacológico convencional.</p>
+      <p>Con un tratamiento completo (generalmente 3-5 años), <strong>muchos pacientes alcanzan una tolerancia duradera</strong> que les permite retirar progresivamente los medicamentos de mantenimiento.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="https://wa.me/593980190654" target="_blank" rel="noopener" class="btn btn-wa">💬 ¿Soy candidato/a?</a>
+      <button class="btn btn-outline-gold" style="color:var(--teal);border-color:var(--teal)" onclick="closeModal('modal-art4')">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal: Art 5 – Longevidad -->
+<div class="modal-overlay" id="modal-art5" role="dialog" aria-modal="true">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('modal-art5')">✕</button>
+    <div class="modal-header">
+      <div class="modal-header-badge">⏳ Longevidad · Bienestar</div>
+      <h2 class="modal-title">Envejecer bien: lo que la medicina de longevidad puede <em>hacer por ti</em></h2>
+    </div>
+    <div class="modal-body">
+      <p>La medicina de longevidad no es anti-envejecimiento en el sentido cosmético. Es una disciplina clínica que busca <strong>extender el período de vida saludable</strong> — los años en que una persona está libre de enfermedad crónica, con plena capacidad física y cognitiva.</p>
+      <p><strong>Los 4 pilares del envejecimiento saludable según la evidencia:</strong></p>
+      <ul class="modal-list">
+        <li><strong>Inflamación crónica de bajo grado:</strong> La causa subyacente de la mayoría de las enfermedades crónicas. Medible y modificable con estilo de vida y nutrición</li>
+        <li><strong>Resistencia a la insulina:</strong> Presente mucho antes del diagnóstico de diabetes, afecta la energía, el peso y la cognición</li>
+        <li><strong>Disfunción mitocondrial:</strong> Las mitocondrias son las centrales energéticas de las células. Su optimización es clave para la vitalidad</li>
+        <li><strong>Desequilibrio del microbioma:</strong> Profundamente ligado a la inmunidad, el estado de ánimo y el metabolismo</li>
+      </ul>
+      <div class="modal-divider"></div>
+      <p><strong>¿Cuándo considerar una evaluación de longevidad?</strong> Si experimentas fatiga crónica sin causa aparente, dificultad para mantener el peso, niebla mental, infecciones frecuentes, envejecimiento acelerado o simplemente deseas ser proactivo con tu salud a largo plazo.</p>
+      <p>Una evaluación completa con el Dr. Vera Vélez identifica exactamente en qué punto de este espectro te encuentras y diseña un plan de intervención <strong>basado en tu biología individual</strong>, no en protocolos genéricos.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="https://wa.me/593980190654" target="_blank" rel="noopener" class="btn btn-wa">💬 Quiero una evaluación</a>
+      <button class="btn btn-outline-gold" style="color:var(--teal);border-color:var(--teal)" onclick="closeModal('modal-art5')">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SCRIPTS ═══ -->
 <script>
 /* NAV SCROLL */
-const nb = document.getElementById('navbar');
-window.addEventListener('scroll', () => nb.classList.toggle('scrolled', scrollY > 40), {passive:true});
+const navEl=document.getElementById('nav');
+window.addEventListener('scroll',()=>navEl.classList.toggle('scrolled',scrollY>40),{passive:true});
 
 /* HAMBURGER */
-const hBtn = document.getElementById('hamBtn');
-const drw  = document.getElementById('drawer');
-
-function setMenu(open) {
-  drw.classList.toggle('open', open);
-  hBtn.classList.toggle('open', open);
-  hBtn.setAttribute('aria-expanded', open);
-  document.body.style.overflow = open ? 'hidden' : '';
-}
-
-hBtn.addEventListener('click', () => setMenu(!drw.classList.contains('open')));
-document.querySelectorAll('.dl').forEach(a => a.addEventListener('click', () => setMenu(false)));
-document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+const hamBtn=document.getElementById('hamBtn'),drw=document.getElementById('drawer');
+function setMenu(o){drw.classList.toggle('open',o);hamBtn.classList.toggle('open',o);hamBtn.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':'';}
+hamBtn.addEventListener('click',()=>setMenu(!drw.classList.contains('open')));
+document.querySelectorAll('.dl').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){setMenu(false);closeAllModals();}});
 
 /* SCROLL REVEAL */
-const io = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); io.unobserve(e.target); } });
-}, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
-document.querySelectorAll('.rv,.rvl,.rvr').forEach(el => io.observe(el));
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target);}});
+},{threshold:.1,rootMargin:'0px 0px -28px 0px'});
+document.querySelectorAll('.rv,.rvl,.rvr').forEach(el=>io.observe(el));
+
+/* MODALS */
+function openModal(id){
+  const ov=document.getElementById(id);
+  if(!ov)return;
+  ov.classList.add('active');
+  document.body.style.overflow='hidden';
+  // focus trap
+  setTimeout(()=>{const fc=ov.querySelector('.modal-close');if(fc)fc.focus();},100);
+}
+function closeModal(id){
+  const ov=document.getElementById(id);
+  if(ov){ov.classList.remove('active');document.body.style.overflow='';}
+}
+function closeAllModals(){
+  document.querySelectorAll('.modal-overlay.active').forEach(m=>{m.classList.remove('active');});
+  document.body.style.overflow='';
+}
+// Close on overlay click
+document.querySelectorAll('.modal-overlay').forEach(ov=>{
+  ov.addEventListener('click',e=>{if(e.target===ov)closeModal(ov.id);});
+});
 
 /* FORM → WHATSAPP */
-function doForm(e) {
+function doForm(e){
   e.preventDefault();
-  const n = document.getElementById('fn').value.trim()   || 'Sin nombre';
-  const p = document.getElementById('fp').value.trim()   || 'Sin teléfono';
-  const s = document.getElementById('fs').value          || 'Consulta general';
-  const m = document.getElementById('fmsg').value.trim();
-  const txt = encodeURIComponent(
-    `Hola Dr. Vera Vélez, le escribo desde su sitio web.\n\n*Nombre:* ${n}\n*Teléfono:* ${p}\n*Especialidad:* ${s}` +
-    (m ? `\n*Motivo:* ${m}` : '')
+  const n=document.getElementById('fn').value.trim()||'Sin nombre';
+  const p=document.getElementById('fp').value.trim()||'Sin teléfono';
+  const s=document.getElementById('fs').value||'Consulta general';
+  const m=document.getElementById('fmsg').value.trim();
+  const txt=encodeURIComponent(
+    `Hola Dr. Vera Vélez, le escribo desde su sitio web.\n\n*Nombre:* ${n}\n*Teléfono:* ${p}\n*Especialidad:* ${s}`+
+    (m?`\n*Motivo:* ${m}`:'')
   );
-  window.open(`https://wa.me/593980190654?text=${txt}`, '_blank');
+  window.open(`https://wa.me/593980190654?text=${txt}`,'_blank');
 }
 </script>
 </body>
